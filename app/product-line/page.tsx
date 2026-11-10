@@ -2,7 +2,7 @@ import Link from 'next/link';
 import {SpatialStage} from '@/components/spatial-stage';
 import {CategoryExhibit,Closing,SectionTop} from '@/components/sections';
 export const metadata={title:'Product Line'};
-export default function ProductLine(){return <><SpatialStage variant="discovery" image="/source/abacus-380-framed.png" name="Abacus 380" descriptor="Diatron / Hematology" next={{ href: "#categories", label: "Browse categories" }}>
+export default function ProductLine(){return <><SpatialStage variant="discovery" image="/source/abacus-380-framed.webp" name="Abacus 380" descriptor="Diatron / Hematology" next={{ href: "#categories", label: "Browse categories" }}>
   <p className="eyebrow">PRODUCT LINE / DISCOVERY</p>
   <h1>A world of<br/><em>precision awaits.</em></h1>
   <p>Explore instruments, reagents and consumables by the work they support.</p>

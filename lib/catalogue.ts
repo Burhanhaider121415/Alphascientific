@@ -13,7 +13,7 @@ export const partners = [
   {name:'Chaoran Medical', image:'/partners/chaoran.png', categories:['blood-collection'], description:'Blood collection'},
 ];
 export const categoryArtwork: Record<string,string> = {
- animal:'/assets/ALFA_17_ANIMAL_CHEMISTRY_EDITORIAL_DRAFT_cleaned.webp', coagulation:'/source/cor-50-framed.png', hematology:'/source/abacus-380-framed.png', immunology:'/assets/ALFA_16_IMMUNOLOGY_ASSAY_CATEGORY_EDITORIAL_DRAFT_cleaned.webp', urinalysis:'/source/urilyzer-cell-framed.png', esr:'/assets/ALFA_12_ESR_EQUIPMENT_CATEGORY_SOURCE_BASED_DRAFT_cleaned.webp', ict:'/assets/ALFA_13_ICT_BIOCHECK_CATEGORY_SOURCE_BASED_DRAFT_cleaned.webp', 'blood-glucose-monitoring':'/assets/ALFA_11_GLUCOSE_H1-100_CATALOG_CONCEPT_DRAFT_cleaned.webp', 'blood-collection':'/assets/ALFA_14_BLOOD_COLLECTION_TUBES_CHAORAN_CATEGORY_DRAFT_cleaned.webp', 'microbial-culture-media':'/assets/ALFA_15_CULTURE_MEDIA_ARENA_CATEGORY_SOURCE_BASED_DRAFT_cleaned.webp', 'clinical-chemistry':'/assets/ALFA_05_CHEM_CM250_CATALOG_DRAFT_cleaned.webp'
+ animal:'/assets/ALFA_17_ANIMAL_CHEMISTRY_EDITORIAL_DRAFT_cleaned.webp', coagulation:'/source/cor-50-framed.webp', hematology:'/source/abacus-380-framed.webp', immunology:'/assets/ALFA_16_IMMUNOLOGY_ASSAY_CATEGORY_EDITORIAL_DRAFT_cleaned.webp', urinalysis:'/source/urilyzer-cell-framed.webp', esr:'/assets/ALFA_12_ESR_EQUIPMENT_CATEGORY_SOURCE_BASED_DRAFT_cleaned.webp', ict:'/assets/ALFA_13_ICT_BIOCHECK_CATEGORY_SOURCE_BASED_DRAFT_cleaned.webp', 'blood-glucose-monitoring':'/assets/ALFA_11_GLUCOSE_H1-100_CATALOG_CONCEPT_DRAFT_cleaned.webp', 'blood-collection':'/assets/ALFA_14_BLOOD_COLLECTION_TUBES_CHAORAN_CATEGORY_DRAFT_cleaned.webp', 'microbial-culture-media':'/assets/ALFA_15_CULTURE_MEDIA_ARENA_CATEGORY_SOURCE_BASED_DRAFT_cleaned.webp', 'clinical-chemistry':'/assets/ALFA_05_CHEM_CM250_CATALOG_DRAFT_cleaned.webp'
 };
 export const categoryDescriptions: Record<string,string> = {
  animal:'Chemistry products for animal diagnostics.',
@@ -24,7 +24,7 @@ export const categoryDescriptions: Record<string,string> = {
  'microbial-culture-media':'Culture media and associated laboratory products.', 'clinical-chemistry':'Instruments and reagents for human clinical chemistry.'
 };
 const officialImages: Record<string,string> = {
- 'COR 50':'/source/cor-50-framed.png','Abacus 380':'/source/abacus-380-framed.png','Urilyzer 100 Pro':'/source/urilyzer-100-pro-framed.png','Urilyzer 500 Pro':'/source/urilyzer-500-pro-framed.png','Urilyzer-Cell':'/source/urilyzer-cell-framed.png'
+ 'COR 50':'/source/cor-50-framed.webp','Abacus 380':'/source/abacus-380-framed.webp','Urilyzer 100 Pro':'/source/urilyzer-100-pro-framed.webp','Urilyzer 500 Pro':'/source/urilyzer-500-pro-framed.webp','Urilyzer-Cell':'/source/urilyzer-cell-framed.webp'
 };
 const uncertain = /Transcribed as printed|unusual spelling or notation/i;
 export function isPublic(item: CatalogueItem) { return item.categoryId !== null && !uncertain.test(item.verification ?? ''); }

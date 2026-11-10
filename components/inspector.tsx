@@ -9,7 +9,7 @@ export function Inspector() {
   const [model, setModel] = useState(true);
   const [angle, setAngle] = useState(0);
   return (
-    <div id="urilyzer-inspection"><SpatialStage variant="inspection" image="/source/urilyzer-cell-framed.png"
+    <div id="urilyzer-inspection"><SpatialStage variant="inspection" image="/source/urilyzer-cell-framed.webp"
       name="Urilyzer-Cell" descriptor={model ? 'Exterior study' : 'Instrument photograph'} model={model} angle={angle}>
       <p className="eyebrow">ANALYTICON / URINALYSIS</p>
       <h2>Inspect the exterior.</h2>

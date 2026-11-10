@@ -3,7 +3,7 @@ import {SpatialStage} from '@/components/spatial-stage';
 import {InquiryForm} from '@/components/inquiry-form';
 import {SectionTop} from '@/components/sections';
 export const metadata={title:'Contact Us'};
-export default async function Contact({searchParams}:{searchParams:Promise<{type?:string;product?:string}>}){const params=await searchParams;return <><SpatialStage variant="contact" image="/source/urilyzer-100-pro-framed.png" name="Urilyzer 100 Pro" descriptor="Analyticon / Urinalysis">
+export default async function Contact({searchParams}:{searchParams:Promise<{type?:string;product?:string}>}){const params=await searchParams;return <><SpatialStage variant="contact" image="/source/urilyzer-100-pro-framed.webp" name="Urilyzer 100 Pro" descriptor="Analyticon / Urinalysis">
   <p className="eyebrow">CONTACT ALFA SCIENTIFIC</p>
   <h1>Let’s begin<br/><em>a conversation.</em></h1>
   <p>For product quotations, technical questions or manufacturer partnerships, choose the pathway that fits your inquiry.</p>

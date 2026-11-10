@@ -174,7 +174,7 @@
 }
 
 
-.company-bridge { background: #eaf4ed; }
+
 .section-top.chapter-in-view { animation: chapter-rule .75s cubic-bezier(.2,.75,.3,1) both; }
 @keyframes chapter-rule {
   from { clip-path: inset(0 72% 0 0); }
@@ -770,36 +770,17 @@
 .editorial-green .careers-copy > p:not(.eyebrow),
 .editorial-green.split-intro > div > p:not(.eyebrow) { color: #d5e9e0; }
 
-.ambient-control {
-  position: absolute;
-  z-index: 3;
-  top: 3%;
-  left: 5%;
-  min-height: 36px;
-  padding: 6px 10px;
-  border: 1px solid #b4e9d157;
-  border-radius: 4px;
-  background: #102e27e8;
-  color: #d9f3e8;
-  font-size: 12px;
-  line-height: 1.2;
-}
-.ambient-control:hover { border-color: #c2f2df; }
-.art-news .ambient-control { top: 14px; left: auto; right: 18px; }
-
 .news-orbits { animation: news-orbit-loop 27s linear infinite paused; }
 .news-core { animation: news-core-loop 15s ease-in-out infinite alternate paused; }
-.art-news[data-ambient-visible]:not([data-ambient-paused]) :is(.news-orbits, .news-core) {
+.art-news[data-ambient-visible] :is(.news-orbits, .news-core) {
   animation-play-state: running;
 }
 @keyframes news-orbit-loop { to { rotate: 360deg; } }
 @keyframes news-core-loop { from { rotate: -11deg; } to { rotate: 12deg; } }
-@keyframes news-orbit-gentle { from { rotate: -5deg; } to { rotate: 5deg; } }
 
 @media (prefers-reduced-motion: reduce) {
   .news-orbits {
-    animation: news-orbit-gentle 10s ease-in-out infinite alternate paused;
-    animation-duration: 10s !important;
+    animation-duration: 48s !important;
     animation-iteration-count: infinite !important;
   }
   .news-core { animation: none; }
@@ -807,5 +788,82 @@
 
 @media (max-width: 420px) {
   .art-news figcaption { left: 10px; bottom: 10px; font-size: 8px; }
-  .art-news .ambient-control { top: 8px; right: 10px; font-size: 11px; }
+}
+
+.company-bridge {
+  color: #edf8f1;
+  background: radial-gradient(ellipse at 82% 43%, #245b4b 0%, transparent 62%), #112f28;
+}
+.company-story {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(28px, 6vw, 100px);
+  margin-block: clamp(36px, 5vw, 78px);
+}
+.company-story .eyebrow, .company-story h2 em { color: #a8ead6; }
+.company-story > div > p:not(.eyebrow) { max-width: 40ch; color: #d6ebe2; line-height: 1.65; margin: 24px 0 6px; }
+.company-portrait { margin: 0; overflow: hidden; background: #163b32; border: 1px solid #9ddcc164; }
+.company-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: 44% center;
+}
+.company-portrait figcaption {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 13px 15px;
+  background: #112f28;
+  color: #b5e6d5;
+  font: 500 10px/1.4 'IBM Plex Mono', monospace;
+  letter-spacing: .08em;
+}
+.company-range {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px 25px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.company-range li {
+  display: flex;
+  align-items: baseline;
+  gap: 13px;
+  border-top: 1px solid #9ddcc164;
+  padding-top: 13px;
+  color: #e2f3eb;
+}
+.company-range li > span { color: #a8ead6; font: 500 11px 'IBM Plex Mono', monospace; }
+
+.page-top-anchor { position: absolute; top: 0; left: 0; }
+.back-to-top {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  right: max(24px, env(safe-area-inset-right));
+  bottom: max(24px, env(safe-area-inset-bottom));
+  z-index: 15;
+  width: 46px;
+  height: 46px;
+  border: 1px solid #92c8b5;
+  border-radius: 50%;
+  background: #153e34;
+  color: #e7faf2;
+  box-shadow: 0 5px 16px #08241f38;
+}
+.back-to-top[hidden] { display: none; }
+.back-to-top:hover { background: #24604f; }
+.back-to-top:has(~ .whatsapp-float) { bottom: max(78px, calc(env(safe-area-inset-bottom) + 54px)); }
+
+@media (max-width: 700px) {
+  .company-story { grid-template-columns: 1fr; }
+  .company-portrait img { aspect-ratio: 5 / 4; }
+  .company-range { grid-template-columns: 1fr; gap: 10px; }
+  .back-to-top { right: max(16px, env(safe-area-inset-right)); }
 }

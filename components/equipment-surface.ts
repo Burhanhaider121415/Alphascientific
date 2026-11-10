@@ -1,4 +1,4 @@
-import { DoubleSide, Mesh, MeshBasicMaterial, PlaneGeometry, SRGBColorSpace, TextureLoader } from 'three';
+import { DoubleSide, Mesh, MeshBasicMaterial, PlaneGeometry, SRGBColorSpace, Texture } from 'three';
 
 const range = (value: number) => Math.min(1, Math.max(0, value));
 
@@ -36,12 +36,14 @@ export type SurfaceVariant = keyof typeof profiles;
 // Project the original photograph onto the visible housing planes. Each sample
 // follows its reference camera ray, preserving the supplied image at the neutral
 // view while creating real parallax across the front, recess and visible side.
-export async function loadEquipmentSurface(image: string, variant: SurfaceVariant) {
-  const texture = await new TextureLoader().loadAsync(image);
+export async function loadEquipmentSurface(image: HTMLImageElement, variant: SurfaceVariant) {
+  await image.decode();
+  const texture = new Texture(image);
+  texture.needsUpdate = true;
   texture.colorSpace = SRGBColorSpace;
   texture.anisotropy = 4;
   const profile = profiles[variant];
-  const height = profile.width * texture.image.height / texture.image.width;
+  const height = profile.width * image.naturalHeight / image.naturalWidth;
   const geometry = new PlaneGeometry(profile.width, height, 64, 48);
   const positions = geometry.getAttribute('position');
   const coordinates = geometry.getAttribute('uv');

@@ -68,7 +68,7 @@ function urineAnalyzer() {
   return model;
 }
 
-export function mountScene(canvas: HTMLCanvasElement, variant: SceneVariant, image: string | undefined, refresh: () => void) {
+export function mountScene(canvas: HTMLCanvasElement, variant: SceneVariant, image: HTMLImageElement | null, refresh: () => void) {
   const renderer = new WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: 'low-power' });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
   const scene = new Scene();
@@ -175,7 +175,7 @@ export function mountScene(canvas: HTMLCanvasElement, variant: SceneVariant, ima
       const arrivalTurn = Math.sin(entrance * Math.PI * 2) * opening;
       const sweep = Math.sin(ambient);
       const pulse = 1 - Math.cos(ambient);
-      const idleTurn = reduced ? 0 : sweep * (isContact ? .13 : .16);
+      const idleTurn = sweep * (reduced ? .07 : isContact ? .16 : .20);
       const cameraX = (isDiscovery ? -2.6 : 2.8) * chamberProgress + x * .65;
       camera.position.set(
         reduced ? 0 : cameraX * (1 - model * .70),
@@ -202,7 +202,7 @@ export function mountScene(canvas: HTMLCanvasElement, variant: SceneVariant, ima
         );
         const yaw = direction * (arrivalTurn * (reduced ? .22 : .30) + chamberProgress * .25) + angle + x * .18 + idleTurn;
         equipment.rotation.set(
-          -.12 - y * .065 - opening * .065,
+          -.12 - y * .065 - opening * .065 + pulse * (reduced ? .016 : .035),
           Math.min(.42, Math.max(-.42, yaw)),
           -opening * .025,
         );

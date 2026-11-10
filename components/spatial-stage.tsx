@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { useEffect, useRef, type ReactNode } from 'react';
 import type { mountScene, SceneVariant } from './scene-geometry';
 
 type Props = {
@@ -22,10 +22,9 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
   const chapter = useRef<HTMLElement>(null);
   const artwork = useRef<HTMLDivElement>(null);
   const canvas = useRef<HTMLCanvasElement>(null);
+  const photograph = useRef<HTMLImageElement>(null);
   const settings = useRef({model, angle});
   const ambientEnabled = variant !== 'inspection';
-  const [ambientPaused, setAmbientPaused] = useState(false);
-  const pauseState = useRef(false);
   const refresh = useRef<(resetTurn?: boolean) => void>(() => {});
 
   useEffect(() => {
@@ -88,12 +87,12 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
       if (!firstDraw) firstDraw = now;
       const entrance = clamp((now - firstDraw) / (reduced ? 2700 : 3400));
       const opening = Math.sin(entrance * Math.PI);
-      const runAmbient = ambientEnabled && !pauseState.current && !document.hidden;
+      const runAmbient = ambientEnabled && !document.hidden;
       if (runAmbient && lastAmbientFrame) {
         ambientTime += Math.min(now - lastAmbientFrame, 72);
       }
       lastAmbientFrame = runAmbient ? now : 0;
-      const ambient = ambientTime * (Math.PI * 2 / 11200);
+      const ambient = ambientTime * (Math.PI * 2 / 10400);
       const sweep = Math.sin(ambient);
       const amplitude = reduced ? .34 : 1;
       const direction = variant === 'discovery' ? 1 : -1;
@@ -158,7 +157,7 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
       void import('./scene-geometry').then(({mountScene}) => {
         if (disposed || version !== request) return;
         try {
-          scene = mountScene(surface, variant, image, () => {
+          scene = mountScene(surface, variant, photograph.current, () => {
             firstDraw = 0;
             visual.tabIndex = 0;
             visual.setAttribute('role', 'group');
@@ -251,13 +250,6 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
     };
   }, [ambientEnabled, image, name, variant]);
 
-  function toggleAmbientMotion() {
-    const paused = !pauseState.current;
-    pauseState.current = paused;
-    setAmbientPaused(paused);
-    refresh.current();
-  }
-
   return (
     <section className={`spatial-chapter spatial-${variant}`} ref={chapter} data-signature={variant}>
       <div className="spatial-frame">
@@ -273,7 +265,7 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
           <div className="equipment-reticle" aria-hidden="true" />
           <div className="equipment-scan" aria-hidden="true" />
           <canvas ref={canvas} aria-hidden="true" />
-          {image && <div className="equipment-lift"><img src={image} alt={name} fetchPriority={isPinned(variant) ? 'high' : 'auto'} /></div>}
+          {image && <div className="equipment-lift"><img ref={photograph} src={image} alt={name} fetchPriority={variant !== 'inspection' ? 'high' : 'auto'} /></div>}
           {next && <div className="equipment-sequence" aria-hidden="true">
             <span>01 &nbsp; Approach</span><span>02 &nbsp; Focus</span><span>03 &nbsp; Explore</span>
           </div>}
@@ -283,11 +275,6 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
             {model && <span className="equipment-fallback-label">Instrument photograph</span>}
           </div>
           <span className="equipment-scale" aria-hidden="true" />
-          {ambientEnabled && (
-            <button type="button" className="ambient-control" onClick={toggleAmbientMotion}>
-              {ambientPaused ? 'Resume ambient motion' : 'Pause ambient motion'}
-            </button>
-          )}
         </div>
       </div>
     </section>

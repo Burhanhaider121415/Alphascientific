@@ -1,11 +1,6 @@
-'use client';
-
-import { useState } from 'react';
-
 export function EditorialArt() {
-  const [paused, setPaused] = useState(false);
   return (
-    <figure className="editorial-visual art-news" data-motion="news" data-ambient-paused={paused || undefined}>
+    <figure className="editorial-visual art-news" data-motion="news">
       <svg aria-hidden="true" viewBox="0 0 680 560" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <radialGradient id="news-light">
@@ -40,9 +35,6 @@ export function EditorialArt() {
         <path d="M63 102V65H100 M580 65H617V102 M63 458V495H100 M580 495H617V458" stroke="#afe6d2" fill="none" strokeOpacity=".7"/>
       </svg>
       <figcaption>FIELD NOTES / ALFA SCIENTIFIC</figcaption>
-      <button type="button" className="ambient-control" onClick={() => setPaused(value => !value)}>
-        {paused ? 'Resume ambient motion' : 'Pause ambient motion'}
-      </button>
     </figure>
   );
 }

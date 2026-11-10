@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export type Exhibit = {
   title: string;
@@ -16,8 +16,25 @@ export type Exhibit = {
 
 export function ExhibitIndex({ entries, kind }: { entries: Exhibit[]; kind: 'categories' | 'instruments' | 'makers' }) {
   const [selected, setSelected] = useState(0);
+  const [displayed, setDisplayed] = useState(0);
   const panel = useRef<HTMLDivElement>(null);
-  const current = entries[selected];
+  const current = entries[displayed];
+  useEffect(() => {
+    const next = entries[selected];
+    if (selected === displayed || !next) return;
+    let cancelled = false;
+    const images = next.productImage ? [next.image, next.productImage] : [next.image];
+    void Promise.all(images.map(src => {
+      const image = new Image();
+      image.src = src;
+      return image.decode();
+    })).catch(() => {
+      // The entry and its links must still work if its photo is unavailable.
+    }).then(() => {
+      if (!cancelled) setDisplayed(selected);
+    });
+    return () => { cancelled = true; };
+  }, [displayed, entries, selected]);
   if (!current) return null;
   const makers = kind === 'makers';
 
@@ -48,17 +65,17 @@ export function ExhibitIndex({ entries, kind }: { entries: Exhibit[]; kind: 'cat
           </li>
         ))}
       </ol>
-      <div className="exhibit-display" ref={panel} data-motion="exhibit">
+      <div className="exhibit-display" ref={panel} data-motion="exhibit" aria-busy={selected !== displayed}>
         <div className="exhibit-sheet" key={current.title}>
           <div className="exhibit-visual" data-crop={current.crop || undefined}>
             {makers ? <>
               <div className="maker-field" aria-hidden="true" />
-              <img className="maker-product" src={current.productImage} alt="" loading="eager" />
-              <div className="maker-feature-mark"><img src={current.image} alt="" loading="eager" /></div>
-            </> : <img src={current.image} alt="" loading="eager" />}
+              <img className="maker-product" src={current.productImage} alt="" loading="lazy" />
+              <div className="maker-feature-mark"><img src={current.image} alt="" loading="lazy" /></div>
+            </> : <img src={current.image} alt="" loading="lazy" />}
           </div>
           <div className="exhibit-caption">
-            <span>{current.meta ?? `${String(selected + 1).padStart(2, '0')} / ${String(entries.length).padStart(2, '0')}`}</span>
+            <span>{current.meta ?? `${String(displayed + 1).padStart(2, '0')} / ${String(entries.length).padStart(2, '0')}`}</span>
             <h3>{current.title}</h3>
             <p>{current.description}</p>
             {current.range ? <div className="maker-ranges">{current.range.map(range=>
