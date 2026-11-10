@@ -1,41 +1,36 @@
-export function EditorialArt({ variant }: { variant: 'news' | 'contact' }) {
-  const news = variant === 'news';
+export function EditorialArt() {
   return (
-    <figure className={`editorial-visual art-${variant}`} aria-hidden="true">
+    <figure className="editorial-visual art-news" data-motion="news" aria-hidden="true">
       <svg viewBox="0 0 680 560" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <linearGradient id={`glass-${variant}`} x2="100%" y2="100%">
-            <stop stopColor="#ddfff3" stopOpacity=".85" />
-            <stop offset=".45" stopColor="#51b59b" stopOpacity=".25" />
-            <stop offset="1" stopColor="#07543c" stopOpacity=".52" />
-          </linearGradient>
-          <pattern id={`grid-${variant}`} width="38" height="38" patternUnits="userSpaceOnUse">
-            <path d="M38 0H0V38" fill="none" stroke="#93d9c6" strokeOpacity=".21" />
+          <radialGradient id="news-light">
+            <stop stopColor="#448d77" /><stop offset="1" stopColor="#12372f" />
+          </radialGradient>
+          <pattern id="news-grid" width="42" height="42" patternUnits="userSpaceOnUse">
+            <path d="M42 0H0V42" fill="none" stroke="#b5eed9" strokeOpacity=".17"/>
           </pattern>
         </defs>
-        <rect width="680" height="560" fill={`url(#grid-${variant})`} />
-        <path d="M42 480V74H638V480Z M42 274H638 M340 74V480" fill="none" stroke="#8ddbc4" strokeOpacity=".48" />
-        {news ? (
-          <g className="art-object" transform="translate(340 276) rotate(-27)">
-            <ellipse rx="224" ry="110" fill="none" stroke="#9dedcf" strokeOpacity=".6" />
-            <ellipse rx="197" ry="72" fill="none" stroke="#9dedcf" strokeOpacity=".42" />
-            <circle r="137" fill="url(#glass-news)" stroke="#b6f5df" strokeWidth="2" />
-            <ellipse rx="137" ry="70" fill="none" stroke="#c5fbea" strokeWidth="2" />
-            <ellipse rx="61" ry="137" fill="none" stroke="#c5fbea" strokeWidth="2" />
-            <circle cx="195" cy="52" r="18" fill="#c6ffee" />
-            <circle cx="-178" cy="-62" r="10" fill="#70d6b3" />
+        <rect width="680" height="560" fill="url(#news-light)" />
+        <rect width="680" height="560" fill="url(#news-grid)" />
+        <g transform="translate(345 271)">
+          <g className="news-orbits" fill="none" stroke="#b5f7dd">
+            <ellipse rx="238" ry="121" strokeOpacity=".57" />
+            <ellipse rx="209" ry="88" strokeOpacity=".65" />
+            <ellipse rx="175" ry="56" strokeOpacity=".40" />
+            <circle cx="216" cy="50" r="9" fill="#cdf7df" />
+            <circle cx="-151" cy="-60" r="7" fill="#80cdb1" />
           </g>
-        ) : (
-          <g className="art-object" fill="url(#glass-contact)" stroke="#b2f1dc" strokeWidth="2">
-            <path d="M115 340L311 226 567 317 372 432Z M115 340V370L372 463 567 348V317 M372 432V463" />
-            <path d="M185 271L325 190 495 250 355 332Z M185 271V300L355 363 495 281V250 M355 332V363" />
-            <path d="M254 202L342 150 425 179 337 232Z M254 202V232L337 262 425 209V179 M337 232V262" />
-            <path d="M342 110V340" strokeDasharray="5 8" />
+          <g className="news-core" fill="none" stroke="#d2fbea" strokeWidth="1.5">
+            <circle r="129" fill="#6db49a" fillOpacity=".29"/>
+            <ellipse rx="65" ry="129"/>
+            <ellipse rx="107" ry="129" strokeOpacity=".45"/>
+            <ellipse rx="129" ry="52"/>
+            <path d="M-129 0H129 M0 -129V129" strokeOpacity=".5"/>
           </g>
-        )}
-        <circle cx="42" cy="74" r="4" fill="#c6ffee" /><circle cx="638" cy="480" r="4" fill="#c6ffee" />
+        </g>
+        <path d="M63 102V65H100 M580 65H617V102 M63 458V495H100 M580 495H617V458" stroke="#afe6d2" fill="none" strokeOpacity=".7"/>
       </svg>
-      <figcaption>{news ? 'FIELD NOTES / ALFA SCIENTIFIC' : 'LABORATORY SUPPLY / PAKISTAN'}</figcaption>
+      <figcaption>FIELD NOTES / ALFA SCIENTIFIC</figcaption>
     </figure>
   );
 }

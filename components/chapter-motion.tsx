@@ -5,22 +5,49 @@ import { usePathname } from 'next/navigation';
 
 export function ChapterMotion() {
   const pathname = usePathname();
+
   useEffect(() => {
-    const targets = document.querySelectorAll<HTMLElement>(
-      'main .section-top, main .editorial-visual, main .careers-image, main .exhibit-display, main .relationship-list'
-    );
+    const reveal = document.querySelectorAll<HTMLElement>('main .section-top, main [data-motion]');
     const preference = matchMedia('(prefers-reduced-motion: reduce)');
-    if (preference.matches) return;
-    const observer = new IntersectionObserver(entries => {
-      for (const entry of entries) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('chapter-in-view');
-          observer.unobserve(entry.target);
-        }
+    const active = new Set<HTMLElement>();
+    let frame = 0;
+
+    function draw() {
+      frame = 0;
+      if (preference.matches) return;
+      const viewport = window.innerHeight;
+      for (const element of active) {
+        const bounds = element.getBoundingClientRect();
+        const progress = Math.max(0, Math.min(1, (viewport - bounds.top) / (viewport + bounds.height)));
+        element.style.setProperty('--motion-progress', progress.toFixed(3));
       }
-    }, { threshold: .17 });
-    targets.forEach(target => observer.observe(target));
-    return () => observer.disconnect();
+    }
+
+    const schedule = () => { if (!frame && active.size) frame = requestAnimationFrame(draw); };
+    const observer = new IntersectionObserver(entries => {
+      for (const {target, isIntersecting} of entries) {
+        if (!(target instanceof HTMLElement)) continue;
+        if (isIntersecting) {
+          if (!preference.matches) target.classList.add('chapter-in-view');
+          if (target.hasAttribute('data-motion')) active.add(target);
+        } else active.delete(target);
+      }
+      schedule();
+    }, { rootMargin: '75px' });
+
+    reveal.forEach(element => observer.observe(element));
+    window.addEventListener('scroll', schedule, {passive:true});
+    window.addEventListener('resize', schedule);
+    preference.addEventListener('change', schedule);
+    return () => {
+      cancelAnimationFrame(frame);
+      observer.disconnect();
+      window.removeEventListener('scroll', schedule);
+      window.removeEventListener('resize', schedule);
+      preference.removeEventListener('change', schedule);
+      for (const element of reveal) element.style.removeProperty('--motion-progress');
+    };
   }, [pathname]);
+
   return null;
 }

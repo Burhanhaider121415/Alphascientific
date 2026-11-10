@@ -1,9 +1,14 @@
 import Link from 'next/link';
-import {EditorialArt} from '@/components/editorial-art';
+import {SpatialStage} from '@/components/spatial-stage';
 import {InquiryForm} from '@/components/inquiry-form';
 import {SectionTop} from '@/components/sections';
 export const metadata={title:'Contact Us'};
-export default async function Contact({searchParams}:{searchParams:Promise<{type?:string;product?:string}>}){const params=await searchParams;return <><section className="page-intro dark-intro split-intro editorial-hero contact-intro"><div><p className="eyebrow">CONTACT ALFA SCIENTIFIC</p><h1>Let’s begin<br/><em>a conversation.</em></h1><p>For product quotations, technical questions or manufacturer partnerships, choose the pathway that fits your inquiry.</p></div><EditorialArt variant="contact"/></section>
+export default async function Contact({searchParams}:{searchParams:Promise<{type?:string;product?:string}>}){const params=await searchParams;return <><SpatialStage variant="contact" image="/source/urilyzer-100-pro-framed.png" name="Urilyzer 100 Pro" descriptor="Analyticon / Urinalysis">
+  <p className="eyebrow">CONTACT ALFA SCIENTIFIC</p>
+  <h1>Let’s begin<br/><em>a conversation.</em></h1>
+  <p>For product quotations, technical questions or manufacturer partnerships, choose the pathway that fits your inquiry.</p>
+  <a className="chapter-cue" href="#direct-contact"><span aria-hidden="true">↓</span> Direct contact</a>
+</SpatialStage>
 <section className="section direct-band" aria-labelledby="direct-contact">
   <h2 id="direct-contact">Direct contact</h2>
   <div><a href="mailto:info@alfascientificstore.com">info@alfascientificstore.com <span aria-hidden="true">↗</span></a>
