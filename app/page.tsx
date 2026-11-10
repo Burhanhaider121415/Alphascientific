@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import {CompanyVisual} from '@/components/company-visual';
 import {SpatialStage} from '@/components/spatial-stage';
 import {CategoryExhibit,Closing,PartnerExhibit,SectionTop} from '@/components/sections';
 import {ExhibitIndex} from '@/components/exhibit-index';
@@ -17,19 +18,15 @@ export default function Home(){return <>
   <div className="action-row"><Link className="button button-light" href="/product-line">Explore Product Line ↗</Link><Link className="button button-ghost" href={quoteHref()}>Request a Quote</Link></div>
 </SpatialStage>
 <section className="section company-bridge" id="company">
-  <SectionTop left="01 / ABOUT ALFA" right="EST. 1985" light />
+  <SectionTop left="01 / ABOUT ALFA" right="EST. 1985" />
   <div className="company-story" data-motion="handoff">
     <div>
       <p className="eyebrow">LABORATORY SUPPLY / PAKISTAN</p>
       <h2>Supporting the<br /><em>work behind</em><br />every result.</h2>
       <p>We supply instruments, reagents and consumables to diagnostic and scientific professionals across Pakistan. Our manufacturer relationships and technical support help laboratories find products for their work.</p>
-      <Link className="text-link inverted" href="/about">Our story ↗</Link>
+      <Link className="text-link" href="/about">Our story ↗</Link>
     </div>
-    <figure className="company-portrait" data-motion="portrait">
-      <img src="/assets/ALFA_21_ABOUT_LAB_PROFESSIONALS_EDITORIAL_DRAFT_cleaned.webp"
-        alt="Laboratory professional at a microscope" width="1600" height="900" loading="lazy" />
-      <figcaption><span>01 / LABORATORY DIAGNOSTICS</span><span>ALFA SCIENTIFIC</span></figcaption>
-    </figure>
+    <CompanyVisual />
   </div>
   <ul className="company-range" aria-label="Laboratory supply and support">
     <li><span>01</span> Instruments</li>

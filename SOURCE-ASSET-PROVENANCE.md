@@ -24,4 +24,4 @@ The Urilyzer-Cell inspection includes an original, simplified WebGL exterior stu
 
 The COR 50, Abacus 380, and Urilyzer 100 Pro scenes project the unchanged product photographs onto authored 3D surface meshes. The depth profiles approximate only the visible housing, angled side, and front recesses in each source angle. The turn is deliberately limited. No rear image, internal mechanism, or complete manufacturer CAD is implied. The public [Wiener Lab COR 50 page](https://www.wiener-lab.com/en-MX/product/249/) was checked for model identity. The site textures remain the approved local brochure crops.
 
-The five public `*-framed.webp` files are delivery copies of the identically named, preserved PNGs. They keep the original dimensions and alpha channel. The homepage company section reuses the approved About laboratory portrait as editorial imagery.
+The five public `*-framed.webp` files are delivery copies of the identically named, preserved PNGs. They keep the original dimensions and alpha channel. The homepage company section uses an original, generic 3D assay-plate illustration. It is an editorial visual with no manufacturer or catalogue model identity.

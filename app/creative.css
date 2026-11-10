@@ -791,8 +791,8 @@
 }
 
 .company-bridge {
-  color: #edf8f1;
-  background: radial-gradient(ellipse at 82% 43%, #245b4b 0%, transparent 62%), #112f28;
+  color: #1c332e;
+  background: #f4f1e8;
 }
 .company-story {
   display: grid;
@@ -801,27 +801,56 @@
   gap: clamp(28px, 6vw, 100px);
   margin-block: clamp(36px, 5vw, 78px);
 }
-.company-story .eyebrow, .company-story h2 em { color: #a8ead6; }
-.company-story > div > p:not(.eyebrow) { max-width: 40ch; color: #d6ebe2; line-height: 1.65; margin: 24px 0 6px; }
-.company-portrait { margin: 0; overflow: hidden; background: #163b32; border: 1px solid #9ddcc164; }
-.company-portrait img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  object-position: 44% center;
+.company-story .eyebrow, .company-story h2 em { color: #256454; }
+.company-story > div > p:not(.eyebrow) {
+  max-width: 42ch;
+  color: #41564e;
+  line-height: 1.65;
+  margin: 24px 0 6px;
 }
-.company-portrait figcaption {
+.company-visual {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  gap: 14px;
-  padding: 13px 15px;
-  background: #112f28;
-  color: #b5e6d5;
-  font: 500 10px/1.4 'IBM Plex Mono', monospace;
-  letter-spacing: .08em;
+  isolation: isolate;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border: 1px solid #a4b7ad;
+  background: radial-gradient(ellipse at 46% 38%, #e2ece3, #a8c0b6);
+}
+.company-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(#4f72642a 1px, transparent 1px),
+    linear-gradient(90deg, #4f72642a 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: radial-gradient(ellipse, #000 12%, transparent 76%);
+}
+.company-visual::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 60% 17% 14%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, #314f486b, transparent 70%);
+  filter: blur(12px);
+}
+.company-visual canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.company-visual[data-rendered] .company-visual-fallback { visibility: hidden; }
+.company-visual-fallback {
+  position: absolute;
+  inset: 16% 12%;
+  display: grid;
+  place-items: center;
+  perspective: 680px;
+}
+.company-visual-fallback span {
+  width: 77%;
+  aspect-ratio: 1.5;
+  border: 5px solid #d5e3d8;
+  border-radius: 12px;
+  transform: rotateX(46deg) rotateZ(-27deg);
+  background: radial-gradient(circle, #365e55 24%, #aac2b5 26% 37%, transparent 39%) 0 0 / 12.5% 20%, #e6ebe2;
+  box-shadow: 0 12px #6c9b8d, 0 20px #314c46, 0 30px 22px #253b4a50;
 }
 .company-range {
   display: grid;
@@ -835,11 +864,11 @@
   display: flex;
   align-items: baseline;
   gap: 13px;
-  border-top: 1px solid #9ddcc164;
+  border-top: 1px solid #97aaa1;
   padding-top: 13px;
-  color: #e2f3eb;
+  color: #24443b;
 }
-.company-range li > span { color: #a8ead6; font: 500 11px 'IBM Plex Mono', monospace; }
+.company-range li > span { color: #256454; font: 500 11px 'IBM Plex Mono', monospace; }
 
 .page-top-anchor { position: absolute; top: 0; left: 0; }
 .back-to-top {
@@ -863,7 +892,7 @@
 
 @media (max-width: 700px) {
   .company-story { grid-template-columns: 1fr; }
-  .company-portrait img { aspect-ratio: 5 / 4; }
+  .company-visual { aspect-ratio: 5 / 4; }
   .company-range { grid-template-columns: 1fr; gap: 10px; }
   .back-to-top { right: max(16px, env(safe-area-inset-right)); }
 }
