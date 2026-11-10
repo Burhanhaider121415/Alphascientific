@@ -63,43 +63,52 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
       const headerHeight = header?.offsetHeight ?? 86;
       const bounds = section.getBoundingClientRect();
       const viewport = window.innerHeight;
-      const pinned = isPinned(variant) && stickyLayout.matches;
+      const reduced = preference.matches;
+      const pinned = isPinned(variant) && stickyLayout.matches && !reduced;
       const visualBounds = visual.getBoundingClientRect();
       const available = Math.max(250, bounds.height - (viewport - headerHeight));
-      const progress = preference.matches ? 0 : clamp(pinned
+      const progress = clamp(pinned
         ? (headerHeight - bounds.top) / available
-        : variant === 'contact' && stickyLayout.matches
-          ? (headerHeight - bounds.top) / Math.min(490, bounds.height * .76)
+        : stickyLayout.matches && variant !== 'inspection'
+          ? (headerHeight - bounds.top) / Math.min(reduced ? 380 : 490, bounds.height * .76)
           : (viewport * .88 - visualBounds.top) / Math.max(430, viewport * .80));
       const drift = Math.sin(progress * Math.PI);
       const elapsed = last ? Math.min(now - last, 34) : 16;
-      const blend = preference.matches ? 1 : 1 - Math.exp(-elapsed / 70);
+      const blend = 1 - Math.exp(-elapsed / (reduced ? 48 : 70));
       last = now;
       cameraX += (x - cameraX) * blend;
       cameraY += (y - cameraY) * blend;
       currentModel += ((settings.current.model && scene ? 1 : 0) - currentModel) * blend;
       currentAngle += (settings.current.angle + turn - currentAngle) * blend;
-      if (!firstDraw && scene) firstDraw = now;
-      const entrance = firstDraw ? clamp((now - firstDraw) / 1450) : 1;
+      if (!firstDraw) firstDraw = now;
+      const entrance = clamp((now - firstDraw) / (reduced ? 2700 : 3400));
+      const opening = Math.sin(entrance * Math.PI);
+      const amplitude = reduced ? .34 : 1;
       const direction = variant === 'discovery' ? 1 : -1;
       const distance = Math.min(visualBounds.width * .17, 112);
       const lift = Math.min(visualBounds.height * .20, 116);
       visual.style.setProperty('--progress', progress.toFixed(3));
       section.style.setProperty('--chapter-progress', progress.toFixed(3));
-      visual.style.setProperty('--equipment-x', `${direction * (drift * distance + progress * 14) + cameraX * 20}px`);
-      visual.style.setProperty('--equipment-y', `${progress * -lift + cameraY * 13}px`);
-      visual.style.setProperty('--equipment-scale', String(1 + drift * .13 - progress * .14));
-      visual.style.setProperty('--equipment-angle', `${direction * (drift * 19 + progress * 7) + cameraX * 11}deg`);
+      visual.style.setProperty('--scan-arrival', opening.toFixed(3));
+      visual.style.setProperty('--scan-position', String((entrance * .72 + progress * .28) * 100));
+      visual.style.setProperty('--equipment-x', `${(direction * (drift * distance + progress * 14) + cameraX * 20) * amplitude}px`);
+      visual.style.setProperty('--equipment-y', `${(progress * -lift + cameraY * 13 - opening * 12) * amplitude}px`);
+      visual.style.setProperty('--equipment-scale', String(1 + (drift * .13 - progress * .14) * amplitude));
+      visual.style.setProperty('--equipment-angle', `${(direction * (drift * 19 + progress * 7) + cameraX * 11 + currentAngle * 39) * amplitude}deg`);
       visual.style.setProperty('--graphic-angle', `${progress * 93 + cameraX * 16}deg`);
       visual.style.setProperty('--model-mix', currentModel.toFixed(3));
       visual.dataset.step = progress >= .74 ? '3' : progress >= .26 ? '2' : '1';
-      if (scene?.draw({progress, x:cameraX, y:cameraY, entrance, model:currentModel, angle:currentAngle, reduced:preference.matches})) {
+      if (scene?.draw({
+        progress, x:cameraX * amplitude, y:cameraY * amplitude, entrance,
+        model:currentModel, angle:currentAngle, reduced,
+      })) {
         visual.dataset.geometry = 'active';
+        if (scene.hasSurface()) visual.dataset.surface = 'depth';
       }
       const settling = Math.abs(x - cameraX) + Math.abs(y - cameraY) > .008 ||
         Math.abs((settings.current.model && scene ? 1 : 0) - currentModel) > .008 ||
         Math.abs(settings.current.angle + turn - currentAngle) > .008;
-      if (entrance < 1 || !preference.matches && settling) schedule();
+      if (entrance < 1 || settling) schedule();
     }
 
     function schedule() { if (!frame && visible) frame = requestAnimationFrame(draw); }
@@ -108,18 +117,24 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
         turn = clamp(drag.turn + (event.clientX - drag.start) * .006, -.60, .60);
         schedule();
       }
-      if (preference.matches || event.pointerType !== 'mouse') return;
+      if (event.pointerType !== 'mouse') return;
       const bounds = pointerArea.getBoundingClientRect();
       x = clamp((event.clientX - bounds.left) / bounds.width * 2 - 1, -1, 1);
       y = clamp((event.clientY - bounds.top) / bounds.height * 2 - 1, -1, 1);
       schedule();
     };
     const startDrag = (event: PointerEvent) => {
-      if (!settings.current.model || !scene || !event.isPrimary || event.button !== 0) return;
+      if ((!settings.current.model && !scene?.hasSurface()) || !scene || !event.isPrimary || event.button !== 0) return;
       drag = {id:event.pointerId, start:event.clientX, turn};
       visual.setPointerCapture(event.pointerId);
     };
     const stopDrag = () => { drag = undefined; };
+    const turnByKey = (event: KeyboardEvent) => {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      event.preventDefault();
+      turn = clamp(turn + (event.key === 'ArrowLeft' ? -.12 : .12), -.52, .52);
+      schedule();
+    };
     const reset = () => { x = 0; y = 0; schedule(); };
     const loadScene = () => {
       if (attempted || !visible) return;
@@ -128,7 +143,13 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
       void import('./scene-geometry').then(({mountScene}) => {
         if (disposed || version !== request) return;
         try {
-          scene = mountScene(surface, variant);
+          scene = mountScene(surface, variant, image, () => {
+            firstDraw = 0;
+            visual.tabIndex = 0;
+            visual.setAttribute('role', 'group');
+            visual.setAttribute('aria-label', `${name} spatial view. Drag or use the left and right arrow keys to turn.`);
+            schedule();
+          });
           firstDraw = 0;
           schedule();
         } catch {
@@ -151,6 +172,10 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
       scene = undefined;
       attempted = false;
       currentModel = 0;
+      delete visual?.dataset.surface;
+      visual?.removeAttribute('tabindex');
+      visual?.removeAttribute('role');
+      visual?.removeAttribute('aria-label');
     }
     const contextLost = (event: Event) => {
       event.preventDefault();
@@ -172,6 +197,7 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
     visual.addEventListener('pointerdown', startDrag);
     visual.addEventListener('pointerup', stopDrag);
     visual.addEventListener('pointercancel', stopDrag);
+    visual.addEventListener('keydown', turnByKey);
     surface.addEventListener('webglcontextlost', contextLost);
     surface.addEventListener('webglcontextrestored', loadScene);
     preference.addEventListener('change', preferenceChanged);
@@ -189,12 +215,13 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
       visual.removeEventListener('pointerdown', startDrag);
       visual.removeEventListener('pointerup', stopDrag);
       visual.removeEventListener('pointercancel', stopDrag);
+      visual.removeEventListener('keydown', turnByKey);
       surface.removeEventListener('webglcontextlost', contextLost);
       surface.removeEventListener('webglcontextrestored', loadScene);
       preference.removeEventListener('change', preferenceChanged);
       clearScene();
     };
-  }, [variant]);
+  }, [image, name, variant]);
 
   return (
     <section className={`spatial-chapter spatial-${variant}`} ref={chapter} data-signature={variant}>
@@ -217,6 +244,7 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
           </div>}
           <div className="equipment-caption">
             <strong>{name}</strong><span>{descriptor}</span>
+            <span className="equipment-drag" aria-hidden="true">Drag to turn</span>
             {model && <span className="equipment-fallback-label">Instrument photograph</span>}
           </div>
           <span className="equipment-scale" aria-hidden="true" />

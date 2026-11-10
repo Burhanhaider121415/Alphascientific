@@ -3,6 +3,7 @@ import {
   ExtrudeGeometry, GridHelper, Group, Mesh, MeshBasicMaterial, MeshStandardMaterial,
   PerspectiveCamera, PointLight, Scene, Shape, TorusGeometry, Vector3, WebGLRenderer,
 } from 'three';
+import { loadEquipmentSurface } from './equipment-surface';
 
 export type SceneVariant = 'home' | 'discovery' | 'inspection' | 'contact';
 
@@ -66,7 +67,7 @@ function urineAnalyzer() {
   return model;
 }
 
-export function mountScene(canvas: HTMLCanvasElement, variant: SceneVariant) {
+export function mountScene(canvas: HTMLCanvasElement, variant: SceneVariant, image: string | undefined, refresh: () => void) {
   const renderer = new WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: 'low-power' });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
   const scene = new Scene();
@@ -132,10 +133,28 @@ export function mountScene(canvas: HTMLCanvasElement, variant: SceneVariant) {
   rig.add(scanner);
   const analyzer = isInspection ? urineAnalyzer() : null;
   if (analyzer) scene.add(analyzer);
+  const equipment = new Group();
+  scene.add(equipment);
+  let surface: Awaited<ReturnType<typeof loadEquipmentSurface>> | undefined;
+  let disposed = false;
+  if (image && variant !== 'inspection') {
+    void loadEquipmentSurface(image, variant).then(result => {
+      if (disposed) {
+        result.dispose();
+        return;
+      }
+      surface = result;
+      equipment.add(result.mesh);
+      refresh();
+    }).catch(() => {
+      // Keep the approved photograph in the DOM if the texture cannot load.
+    });
+  }
   let width = 0;
   let height = 0;
 
   return {
+    hasSurface: () => Boolean(surface),
     draw({progress, x, y, entrance, model, angle, reduced}: Frame) {
       const w = canvas.clientWidth;
       const h = canvas.clientHeight;
@@ -149,34 +168,55 @@ export function mountScene(canvas: HTMLCanvasElement, variant: SceneVariant) {
       }
       const tight = w / h < .94;
       const drift = Math.sin(progress * Math.PI);
-      const cameraX = (isDiscovery ? -2.6 : 2.8) * progress + x * .65;
+      const chamberProgress = progress * (reduced ? .42 : 1);
+      const opening = Math.sin(entrance * Math.PI);
+      const arrivalTurn = Math.sin(entrance * Math.PI * 2) * opening;
+      const cameraX = (isDiscovery ? -2.6 : 2.8) * chamberProgress + x * .65;
       camera.position.set(
-        cameraX * (1 - model * .70),
-        .85 + progress * 1.6 + y * .38 - model * .05,
-        (tight ? 10.2 : 9.4) - drift * 1.1 + model * 1.0,
+        reduced ? 0 : cameraX * (1 - model * .70),
+        .85 + (reduced ? 0 : progress * 1.6 + y * .38) - model * .05,
+        (tight ? 10.2 : 9.4) - (reduced ? 0 : drift * 1.1) + model,
       );
-      camera.lookAt(0, -.28 + progress * .48, 0);
-      rig.position.set((isDiscovery ? 1.02 : -.83) * drift, isContact ? .12 : .22, -.25);
-      rig.rotation.set(-.15 + progress * .43 + y * .10, x * .20 + progress * (isDiscovery ? -.35 : .52), -.05);
-      optics.scale.setScalar(reduced ? 1 : .89 + entrance * .11 + drift * .10);
+      camera.lookAt(0, -.28 + (reduced ? 0 : progress * .48), 0);
+      rig.position.set((isDiscovery ? 1.02 : -.83) * drift * (reduced ? .32 : 1), isContact ? .12 : .22, -.25);
+      rig.rotation.set(-.15 + chamberProgress * .43 + y * .10, x * .20 + chamberProgress * (isDiscovery ? -.35 : .52) + arrivalTurn * .34, -.05);
+      optics.scale.setScalar(.89 + entrance * .11 + drift * (reduced ? .045 : .10));
       rings.forEach((ring, i) => {
-        ring.position.z = -1.05 - i * (.42 + progress * (isDiscovery ? .60 : .29));
+        ring.position.z = -1.05 - i * (.42 + chamberProgress * (isDiscovery ? .60 : .29));
       });
-      scanner.visible = !reduced;
-      scanner.position.y = 1.9 - (progress * .72 + entrance * .28) * 3.8;
-      scanner.material.opacity = Math.max(.04, .78 - model * .68);
-      accent.intensity = reduced ? 14 + entrance * 10 : 13 + 28 * (drift + (1 - entrance) * .46);
-      accent.position.x = x * 3.6 + progress * 3.2 - 1.2;
+      scanner.position.y = 1.75 - (chamberProgress * .71 + entrance * .52) * 3.6;
+      scanner.material.opacity = Math.max(.10, .32 + opening * .55 - model * .25);
+      accent.intensity = 18 + 29 * (drift * .58 + opening);
+      accent.position.x = x * 3.6 + chamberProgress * 3.2 + (entrance - .5) * 3.5;
+      if (surface) {
+        const direction = isDiscovery ? 1 : -1;
+        equipment.position.set(
+          direction * drift * (reduced ? .20 : .62) + x * .15,
+          .12 + (reduced ? .21 : .49) * progress + opening * (reduced ? .10 : .19),
+          isContact ? .07 : .19,
+        );
+        equipment.rotation.set(
+          -.12 - y * .065 - opening * .065,
+          direction * (arrivalTurn * (reduced ? .22 : .30) + chamberProgress * .25) + angle + x * .18,
+          -opening * .025,
+        );
+        equipment.scale.setScalar(1 + drift * (reduced ? .026 : .052));
+      }
       if (analyzer) {
         analyzer.visible = model > .01;
         analyzer.position.y = -.36 - (1 - model) * .21;
-        analyzer.rotation.set(-.045 - y * .04, -.40 + angle + x * .19 + drift * .18, 0);
+        analyzer.rotation.set(-.045 - y * .04, -.40 + angle + x * .19 + drift * .18 + arrivalTurn * .37, 0);
         analyzer.scale.setScalar(.87 + model * .13);
       }
       renderer.render(scene, camera);
       return true;
     },
     dispose() {
+      disposed = true;
+      if (surface) {
+        equipment.remove(surface.mesh);
+        surface.dispose();
+      }
       const geometries = new Set<{dispose: () => void}>();
       const materials = new Set<{dispose: () => void}>();
       scene.traverse(object => {

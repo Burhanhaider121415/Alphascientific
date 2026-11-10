@@ -286,7 +286,6 @@
 @media (prefers-reduced-motion: reduce) {
   :is(.spatial-home, .spatial-discovery) { min-height: auto; }
   :is(.spatial-home, .spatial-discovery) .spatial-frame { position: relative; top: auto; }
-  .equipment-lift { transform: none; }
   .equipment-reticle { transform: translate(-50%, -50%); }
   .section-top.chapter-in-view, .exhibit-display.chapter-in-view, .exhibit-visual img, .editorial-visual.chapter-in-view img, .editorial-visual.chapter-in-view svg, .careers-image.chapter-in-view img { animation: none; }
 }
@@ -642,8 +641,8 @@
   from { clip-path: inset(0 7% 0 3%); }
   to { clip-path: inset(0); }
 }
-.news-orbits { transform: rotate(calc(-29deg + var(--motion-progress, .3) * 116deg)) scale(calc(.88 + var(--motion-progress, .3) * .27)); }
-.news-core { transform: rotate(calc(-15deg - var(--motion-progress, .3) * 66deg)); }
+.news-orbits { transform: rotate(calc(-67deg + var(--news-arrival, 0) * 44deg + var(--motion-progress, .3) * 116deg)) scale(calc(.88 + var(--motion-progress, .3) * .27)); }
+.news-core { transform: rotate(calc(17deg - var(--news-arrival, 0) * 28deg - var(--motion-progress, .3) * 66deg)); }
 .art-news { background: #12372f; }
 .direct-band { position: relative; z-index: 1; }
 .button:active { scale: .975; }
@@ -661,7 +660,6 @@
 @media (prefers-reduced-motion: reduce) {
   .exhibit-sheet .exhibit-visual > img, .exhibit-caption, .maker-feature-mark, .partner-wall.chapter-in-view li, .careers-opportunities.chapter-in-view .opportunity-card, [data-motion="category-art"].chapter-in-view .category-photo, [data-motion="portrait"].chapter-in-view { animation: none; }
   [data-motion="category-art"] .category-photo img, [data-motion="product-art"] img, [data-motion="portrait"] img, .partner-wall li:nth-child(2n) { translate: none; }
-  .news-core, .news-orbits { transform: none; }
 }
 
 .equipment-sequence {
@@ -696,6 +694,67 @@
 .product-title h3 { min-width: 0; overflow-wrap: anywhere; }
 .product-title > span { flex: none; }
 
+
+.equipment-stage[data-surface="depth"] {
+  cursor: grab;
+  touch-action: pan-y;
+}
+.equipment-stage[data-surface="depth"]:active { cursor: grabbing; }
+.equipment-stage[data-surface="depth"] .equipment-lift { opacity: 0; }
+.equipment-caption .equipment-drag { display: none; }
+.equipment-stage[data-surface="depth"] .equipment-drag {
+  display: block;
+  position: absolute;
+  top: -29px;
+  right: 0;
+  color: #d4f4e8;
+}
+.equipment-scan {
+  inset: 13% 4% 17%;
+  background: linear-gradient(to bottom, transparent calc(var(--scan-position, 0) * 1% - 9%),
+    #d1fbe923 calc(var(--scan-position, 0) * 1% - 3%),
+    #bdffe4a3 calc(var(--scan-position, 0) * 1%),
+    transparent calc(var(--scan-position, 0) * 1% + 1%));
+  transform: none;
+  opacity: calc(var(--scan-arrival, 0) * .76 + var(--progress) * .2);
+  mask-image: radial-gradient(ellipse at center, #000 15%, #000c 52%, transparent 75%);
+}
 @media (prefers-reduced-motion: reduce) {
-  .stage-path .chapter-cue { display: none; }
+  .news-orbits { transform: rotate(calc(-27deg + var(--news-arrival, 0) * 34deg + var(--motion-progress, .3) * 53deg)); }
+  .news-core { transform: rotate(calc(15deg - var(--news-arrival, 0) * 20deg - var(--motion-progress, .3) * 24deg)); }
+}
+
+@media (min-width: 861px) {
+  :is(.spatial-home, .spatial-discovery) .equipment-stage canvas {
+    left: calc(-1 * min(6vw, 78px));
+    width: calc(100% + min(12vw, 156px));
+  }
+}
+.equipment-stage[data-surface="depth"]:focus-visible {
+  outline: 2px solid var(--stage-ink);
+  outline-offset: -3px;
+}
+
+/* Section rules acknowledge the reader's scroll position without moving copy. */
+.section-top { position: relative; }
+.section-top::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background: #438d74;
+  opacity: var(--motion-progress, 0);
+  transform: scaleX(calc(.17 + var(--motion-progress, 0) * .83));
+  transform-origin: left;
+  pointer-events: none;
+}
+.section-top.light::after { background: #8de9c8; }
+@media (prefers-reduced-motion: reduce) {
+  .exhibit-sheet { animation: exhibit-quiet-entry .19s ease-out both; animation-duration: .19s !important; }
+}
+@keyframes exhibit-quiet-entry {
+  from { opacity: .73; }
+  to { opacity: 1; }
 }
