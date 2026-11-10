@@ -288,9 +288,7 @@
   :is(.spatial-home, .spatial-discovery) .spatial-frame { position: relative; top: auto; }
   .equipment-lift { transform: none; }
   .equipment-reticle { transform: translate(-50%, -50%); }
-  .section-top.chapter-in-view, .exhibit-display.chapter-in-view, .exhibit-visual img,
-  .editorial-visual.chapter-in-view img, .editorial-visual.chapter-in-view svg,
-  .careers-image.chapter-in-view img { animation: none; }
+  .section-top.chapter-in-view, .exhibit-display.chapter-in-view, .exhibit-visual img, .editorial-visual.chapter-in-view img, .editorial-visual.chapter-in-view svg, .careers-image.chapter-in-view img { animation: none; }
 }
 
 .news-empty {
@@ -424,10 +422,7 @@
   .spatial-home .spatial-copy h1, .spatial-discovery .spatial-copy h1 { translate: none; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .equipment-grid, .equipment-scan, .equipment-lift,
-  .spatial-home .spatial-copy h1, .spatial-discovery .spatial-copy h1 { translate: none; }
-  .equipment-stage[data-inspect="true"] { touch-action: auto; }
-  .inspect-turn { display: none; }
+  .equipment-grid, .equipment-scan, .equipment-lift, .spatial-home .spatial-copy h1, .spatial-discovery .spatial-copy h1 { translate: none; }
 }
 
 /* Catalogue views preserve the approved photographs and stage them in one color field. */
@@ -664,12 +659,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .exhibit-sheet .exhibit-visual > img, .exhibit-caption, .maker-feature-mark,
-  .partner-wall.chapter-in-view li, .careers-opportunities.chapter-in-view .opportunity-card,
-  [data-motion="category-art"].chapter-in-view .category-photo,
-  [data-motion="portrait"].chapter-in-view { animation: none; }
-  [data-motion="category-art"] .category-photo img, [data-motion="product-art"] img,
-  [data-motion="portrait"] img, .partner-wall li:nth-child(2n) { translate: none; }
+  .exhibit-sheet .exhibit-visual > img, .exhibit-caption, .maker-feature-mark, .partner-wall.chapter-in-view li, .careers-opportunities.chapter-in-view .opportunity-card, [data-motion="category-art"].chapter-in-view .category-photo, [data-motion="portrait"].chapter-in-view { animation: none; }
+  [data-motion="category-art"] .category-photo img, [data-motion="product-art"] img, [data-motion="portrait"] img, .partner-wall li:nth-child(2n) { translate: none; }
   .news-core, .news-orbits { transform: none; }
 }
 
@@ -699,14 +690,12 @@
 }
 @media (prefers-reduced-motion: reduce) {
   [data-motion="handoff"].chapter-in-view { animation: none; }
-  .spatial-inspection .inspect-controls { display: none; }
 }
 .spatial-inspection:has([data-geometry="fallback"]) .inspect-controls { display: none; }
 
 .product-title h3 { min-width: 0; overflow-wrap: anywhere; }
 .product-title > span { flex: none; }
 
-button.chapter-cue { border: 0; background: transparent; padding: 0; }
 @media (prefers-reduced-motion: reduce) {
-  button.chapter-cue { display: none; }
+  .stage-path .chapter-cue { display: none; }
 }

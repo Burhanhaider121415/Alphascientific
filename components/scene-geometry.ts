@@ -13,6 +13,7 @@ type Frame = {
   entrance: number;
   model: number;
   angle: number;
+  reduced: boolean;
 };
 
 function roundedHousing(width: number, height: number, depth: number, radius: number) {
@@ -135,7 +136,7 @@ export function mountScene(canvas: HTMLCanvasElement, variant: SceneVariant) {
   let height = 0;
 
   return {
-    draw({progress, x, y, entrance, model, angle}: Frame) {
+    draw({progress, x, y, entrance, model, angle, reduced}: Frame) {
       const w = canvas.clientWidth;
       const h = canvas.clientHeight;
       if (!w || !h) return false;
@@ -157,13 +158,14 @@ export function mountScene(canvas: HTMLCanvasElement, variant: SceneVariant) {
       camera.lookAt(0, -.28 + progress * .48, 0);
       rig.position.set((isDiscovery ? 1.02 : -.83) * drift, isContact ? .12 : .22, -.25);
       rig.rotation.set(-.15 + progress * .43 + y * .10, x * .20 + progress * (isDiscovery ? -.35 : .52), -.05);
-      optics.scale.setScalar(.89 + entrance * .11 + drift * .10);
+      optics.scale.setScalar(reduced ? 1 : .89 + entrance * .11 + drift * .10);
       rings.forEach((ring, i) => {
         ring.position.z = -1.05 - i * (.42 + progress * (isDiscovery ? .60 : .29));
       });
+      scanner.visible = !reduced;
       scanner.position.y = 1.9 - (progress * .72 + entrance * .28) * 3.8;
       scanner.material.opacity = Math.max(.04, .78 - model * .68);
-      accent.intensity = 13 + 28 * (drift + (1 - entrance) * .46);
+      accent.intensity = reduced ? 14 + entrance * 10 : 13 + 28 * (drift + (1 - entrance) * .46);
       accent.position.x = x * 3.6 + progress * 3.2 - 1.2;
       if (analyzer) {
         analyzer.visible = model > .01;

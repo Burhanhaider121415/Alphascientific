@@ -36,7 +36,7 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
     const visual = artwork.current;
     const surface = canvas.current;
     if (!section || !visual || !surface) return;
-    const motion = matchMedia('(prefers-reduced-motion: reduce)');
+    const preference = matchMedia('(prefers-reduced-motion: reduce)');
     const pointerArea = isPinned(variant) ? visual.parentElement ?? visual : visual;
     const stickyLayout = matchMedia(desktopStage);
     const header = document.querySelector<HTMLElement>('.site-header');
@@ -66,14 +66,14 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
       const pinned = isPinned(variant) && stickyLayout.matches;
       const visualBounds = visual.getBoundingClientRect();
       const available = Math.max(250, bounds.height - (viewport - headerHeight));
-      const progress = motion.matches ? 0 : clamp(pinned
+      const progress = preference.matches ? 0 : clamp(pinned
         ? (headerHeight - bounds.top) / available
         : variant === 'contact' && stickyLayout.matches
           ? (headerHeight - bounds.top) / Math.min(490, bounds.height * .76)
           : (viewport * .88 - visualBounds.top) / Math.max(430, viewport * .80));
       const drift = Math.sin(progress * Math.PI);
       const elapsed = last ? Math.min(now - last, 34) : 16;
-      const blend = 1 - Math.exp(-elapsed / 70);
+      const blend = preference.matches ? 1 : 1 - Math.exp(-elapsed / 70);
       last = now;
       cameraX += (x - cameraX) * blend;
       cameraY += (y - cameraY) * blend;
@@ -91,42 +91,42 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
       visual.style.setProperty('--equipment-scale', String(1 + drift * .13 - progress * .14));
       visual.style.setProperty('--equipment-angle', `${direction * (drift * 19 + progress * 7) + cameraX * 11}deg`);
       visual.style.setProperty('--graphic-angle', `${progress * 93 + cameraX * 16}deg`);
-      visual.style.setProperty('--model-mix', (motion.matches ? 0 : currentModel).toFixed(3));
+      visual.style.setProperty('--model-mix', currentModel.toFixed(3));
       visual.dataset.step = progress >= .74 ? '3' : progress >= .26 ? '2' : '1';
-      if (scene?.draw({progress, x:cameraX, y:cameraY, entrance, model:currentModel, angle:currentAngle})) {
+      if (scene?.draw({progress, x:cameraX, y:cameraY, entrance, model:currentModel, angle:currentAngle, reduced:preference.matches})) {
         visual.dataset.geometry = 'active';
       }
-      if (!motion.matches && (entrance < 1 || Math.abs(x - cameraX) + Math.abs(y - cameraY) > .008 ||
+      const settling = Math.abs(x - cameraX) + Math.abs(y - cameraY) > .008 ||
         Math.abs((settings.current.model && scene ? 1 : 0) - currentModel) > .008 ||
-        Math.abs(settings.current.angle + turn - currentAngle) > .008)) schedule();
+        Math.abs(settings.current.angle + turn - currentAngle) > .008;
+      if (entrance < 1 || !preference.matches && settling) schedule();
     }
 
     function schedule() { if (!frame && visible) frame = requestAnimationFrame(draw); }
     const move = (event: PointerEvent) => {
-      if (motion.matches) return;
       if (drag?.id === event.pointerId) {
         turn = clamp(drag.turn + (event.clientX - drag.start) * .006, -.60, .60);
         schedule();
       }
-      if (event.pointerType !== 'mouse') return;
+      if (preference.matches || event.pointerType !== 'mouse') return;
       const bounds = pointerArea.getBoundingClientRect();
       x = clamp((event.clientX - bounds.left) / bounds.width * 2 - 1, -1, 1);
       y = clamp((event.clientY - bounds.top) / bounds.height * 2 - 1, -1, 1);
       schedule();
     };
     const startDrag = (event: PointerEvent) => {
-      if (!settings.current.model || !scene || motion.matches || !event.isPrimary || event.button !== 0) return;
+      if (!settings.current.model || !scene || !event.isPrimary || event.button !== 0) return;
       drag = {id:event.pointerId, start:event.clientX, turn};
       visual.setPointerCapture(event.pointerId);
     };
     const stopDrag = () => { drag = undefined; };
     const reset = () => { x = 0; y = 0; schedule(); };
     const loadScene = () => {
-      if (attempted || motion.matches || !visible) return;
+      if (attempted || !visible) return;
       attempted = true;
       const version = ++request;
       void import('./scene-geometry').then(({mountScene}) => {
-        if (disposed || motion.matches || version !== request) return;
+        if (disposed || version !== request) return;
         try {
           scene = mountScene(surface, variant);
           firstDraw = 0;
@@ -160,11 +160,7 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
     };
     function preferenceChanged() {
       reset();
-      if (motion.matches) {
-        clearScene();
-        if (visual) delete visual.dataset.geometry;
-        visual?.style.setProperty('--model-mix', '0');
-      } else loadScene();
+      loadScene();
     }
     refresh.current = (resetTurn = false) => {
       if (resetTurn) turn = 0;
@@ -178,7 +174,7 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
     visual.addEventListener('pointercancel', stopDrag);
     surface.addEventListener('webglcontextlost', contextLost);
     surface.addEventListener('webglcontextrestored', loadScene);
-    motion.addEventListener('change', preferenceChanged);
+    preference.addEventListener('change', preferenceChanged);
     schedule();
 
     return () => {
@@ -195,23 +191,10 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
       visual.removeEventListener('pointercancel', stopDrag);
       surface.removeEventListener('webglcontextlost', contextLost);
       surface.removeEventListener('webglcontextrestored', loadScene);
-      motion.removeEventListener('change', preferenceChanged);
+      preference.removeEventListener('change', preferenceChanged);
       clearScene();
     };
   }, [variant]);
-
-  function startChapter() {
-    const section = chapter.current;
-    const visual = artwork.current;
-    if (!section || !visual || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const headerHeight = document.querySelector<HTMLElement>('.site-header')?.offsetHeight ?? 86;
-    const pinned = matchMedia(desktopStage).matches;
-    const bounds = section.getBoundingClientRect();
-    const target = pinned
-      ? window.scrollY + bounds.top - headerHeight + (bounds.height - window.innerHeight + headerHeight) * .54
-      : window.scrollY + visual.getBoundingClientRect().top - headerHeight - 12;
-    window.scrollTo({top: target, behavior: 'smooth'});
-  }
 
   return (
     <section className={`spatial-chapter spatial-${variant}`} ref={chapter} data-signature={variant}>
@@ -219,7 +202,7 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
         <div className="spatial-copy">
           {children}
           {next && <div className="stage-path">
-            <button className="chapter-cue" type="button" onClick={startChapter}><span aria-hidden="true">↓</span> Explore {name}</button>
+            <span className="chapter-cue"><span aria-hidden="true">↓</span> Scroll to explore</span>
             <a className="stage-next" href={next.href}>{next.label} ↗</a>
           </div>}
         </div>
