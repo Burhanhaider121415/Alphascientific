@@ -1,0 +1,4629 @@
+{
+  "categories": [
+    {
+      "id": "animal",
+      "name": "Animal",
+      "kind": "primary",
+      "tree": [
+        {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "children": [
+            {
+              "id": "reagents",
+              "label": "Reagents"
+            },
+            {
+              "id": "instruments",
+              "label": "Instruments",
+              "children": [
+                {
+                  "id": "bovine",
+                  "label": "Bovine"
+                },
+                {
+                  "id": "bambina",
+                  "label": "Bambina"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "document": "05-source-material/references/Products Mind Map Diagram.png",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "coagulation",
+      "name": "Coagulation",
+      "kind": "primary",
+      "tree": [
+        {
+          "id": "reagents",
+          "label": "Reagents"
+        },
+        {
+          "id": "instruments",
+          "label": "Instruments"
+        }
+      ],
+      "sources": [
+        {
+          "document": "05-source-material/references/Products Mind Map Diagram.png",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "hematology",
+      "name": "Hematology",
+      "kind": "primary",
+      "tree": [
+        {
+          "id": "3-part-analyzer",
+          "label": "3-Part Analyzer"
+        }
+      ],
+      "sources": [
+        {
+          "document": "05-source-material/references/Products Mind Map Diagram.png",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "immunology",
+      "name": "Immunology",
+      "kind": "primary",
+      "tree": [
+        {
+          "id": "instruments",
+          "label": "Instruments",
+          "note": "Two information markers; model identities not established."
+        }
+      ],
+      "sources": [
+        {
+          "document": "05-source-material/references/Products Mind Map Diagram.png",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "urinalysis",
+      "name": "Urinalysis",
+      "kind": "primary",
+      "tree": [
+        {
+          "id": "urine-sediment",
+          "label": "Urine Sediment",
+          "children": [
+            {
+              "id": "urine-analysis",
+              "label": "Urine Analysis"
+            }
+          ]
+        },
+        {
+          "id": "urine-strips",
+          "label": "Urine Strips"
+        }
+      ],
+      "sources": [
+        {
+          "document": "05-source-material/references/Products Mind Map Diagram.png",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "esr",
+      "name": "ESR",
+      "kind": "primary",
+      "tree": [
+        {
+          "id": "erythrocyte-esr",
+          "label": "Erythrocyte ESR"
+        }
+      ],
+      "sources": [
+        {
+          "document": "05-source-material/references/Products Mind Map Diagram.png",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "ict",
+      "name": "ICT",
+      "kind": "primary",
+      "tree": [
+        {
+          "id": "ict-devices",
+          "label": "ICT Devices"
+        }
+      ],
+      "sources": [
+        {
+          "document": "05-source-material/references/Products Mind Map Diagram.png",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "blood-glucose-monitoring",
+      "name": "Blood Glucose Monitoring",
+      "kind": "primary",
+      "tree": [
+        {
+          "id": "glucose-meter",
+          "label": "Glucose Meter",
+          "children": [
+            {
+              "id": "h1-100",
+              "label": "H1-100"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "document": "05-source-material/references/Products Mind Map Diagram.png",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "blood-collection",
+      "name": "Blood Collection",
+      "kind": "primary",
+      "tree": [
+        {
+          "id": "collection-products",
+          "label": "Collection products"
+        },
+        {
+          "id": "needle",
+          "label": "Needle",
+          "note": "No specific model established."
+        }
+      ],
+      "sources": [
+        {
+          "document": "05-source-material/references/Products Mind Map Diagram.png",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "microbial-culture-media",
+      "name": "Microbial Culture Media",
+      "kind": "primary",
+      "tree": [
+        {
+          "id": "reagents",
+          "label": "Reagents and culture-media product information"
+        }
+      ],
+      "sources": [
+        {
+          "document": "05-source-material/references/Products Mind Map Diagram.png",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "clinical-chemistry",
+      "name": "Human Clinical Chemistry",
+      "kind": "supplemental",
+      "tree": [
+        {
+          "id": "instruments",
+          "label": "Instruments"
+        },
+        {
+          "id": "reagents",
+          "label": "Reagents and test groups"
+        }
+      ],
+      "sources": [
+        {
+          "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+          "page": 2
+        },
+        {
+          "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+          "page": 4
+        }
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "id": "wiener-lab",
+      "name": "Wiener Lab",
+      "sources": [
+        {
+          "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "diatron",
+      "name": "Diatron",
+      "sources": [
+        {
+          "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "id": "biocheck",
+      "name": "BioCheck",
+      "sources": [
+        {
+          "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "id": "analyticon",
+      "name": "Analyticon",
+      "sources": [
+        {
+          "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "arena-bioscien",
+      "name": "Arena BioScien",
+      "sources": [
+        {
+          "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "id": "chaoran-medical",
+      "name": "Chaoran Medical",
+      "sources": [
+        {
+          "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+          "page": 3
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "id": "alfa-01",
+      "filename": "05-source-material/images/ALFA_01_LOGO_CLEAN_TRANSPARENT_cleaned.png",
+      "role": "logo",
+      "status": "Supplied cleaned logo.",
+      "intendedFor": "Alfa logo",
+      "sources": [
+        {
+          "document": "02-docs/source-notes/NOTION-REFERENCES.md",
+          "page": 1,
+          "note": "Visual Asset Register; user confirmed Image 17 replacement in chat on 10 November 2026."
+        }
+      ]
+    },
+    {
+      "id": "alfa-02",
+      "filename": "05-source-material/images/ALFA_02_COAG_COR50_CATALOG_DRAFT_cleaned.png",
+      "role": "product-draft",
+      "status": "Model-specific draft; compare source before presenting as authentic.",
+      "intendedFor": "COR 50",
+      "sources": [
+        {
+          "document": "02-docs/source-notes/NOTION-REFERENCES.md",
+          "page": 1,
+          "note": "Visual Asset Register; user confirmed Image 17 replacement in chat on 10 November 2026."
+        }
+      ]
+    },
+    {
+      "id": "alfa-03",
+      "filename": "05-source-material/images/ALFA_03_COAG_SC40_CATALOG_DRAFT_cleaned.png",
+      "role": "product-draft",
+      "status": "Model-specific draft; compare source before presenting as authentic.",
+      "intendedFor": "SC-40",
+      "sources": [
+        {
+          "document": "02-docs/source-notes/NOTION-REFERENCES.md",
+          "page": 1,
+          "note": "Visual Asset Register; user confirmed Image 17 replacement in chat on 10 November 2026."
+        }
+      ]
+    },
+    {
+      "id": "alfa-04",
+      "filename": "05-source-material/images/ALFA_04_CHEM_METROLAB1600DR_CATALOG_DRAFT_cleaned.png",
+      "role": "product-draft",
+      "status": "Model-specific draft; compare source before presenting as authentic.",
+      "intendedFor": "Metro-Lab 1600 DR",
+      "sources": [
+        {
+          "document": "02-docs/source-notes/NOTION-REFERENCES.md",
+          "page": 1,
+          "note": "Visual Asset Register; user confirmed Image 17 replacement in chat on 10 November 2026."
+        }
+      ]
+    },
+    {
+      "id": "alfa-05",
+      "filename": "05-source-material/images/ALFA_05_CHEM_CM250_CATALOG_DRAFT_cleaned.png",
+      "role": "product-draft",
+      "status": "Model-specific draft; compare source before presenting as authentic.",
+      "intendedFor": "CM 250",
+      "sources": [
+        {
+          "document": "02-docs/source-notes/NOTION-REFERENCES.md",
+          "page": 1,
+          "note": "Visual Asset Register; user confirmed Image 17 replacement in chat on 10 November 2026."
+        }
+      ]
+    },
+    {
+      "id": "alfa-06",
+      "filename": "05-source-material/images/ALFA_06_CHEM_CM320I_CATALOG_DRAFT_cleaned.png",
+      "role": "product-draft",
+      "status": "Model-specific draft; compare source before presenting as authentic.",
+      "intendedFor": "CM320i",
+      "sources": [
+        {
+          "document": "02-docs/source-notes/NOTION-REFERENCES.md",
+          "page": 1,
+          "note": "Visual Asset Register; user confirmed Image 17 replacement in chat on 10 November 2026."
+        }
+      ]
+    },
+    {
+      "id": "alfa-07",
+      "filename": "05-source-material/images/ALFA_07_URINALYSIS_URILYZER100PRO_CATALOG_DRAFT_cleaned.png",
+      "role": "product-draft",
+      "status": "Generated draft differs visibly from brochure photograph; do not present as model-exact. See IMAGE-QA.md.",
+      "intendedFor": "Urilyzer 100 Pro",
+      "sources": [
+        {
+          "document": "02-docs/source-notes/NOTION-REFERENCES.md",
+          "page": 1,
+          "note": "Visual Asset Register; user confirmed Image 17 replacement in chat on 10 November 2026."
+        }
+      ]
+    },
+    {
+      "id": "alfa-08",
+      "filename": "05-source-material/images/ALFA_08_URINALYSIS_URILYZER500PRO_CATALOG_DRAFT_cleaned.png",
+      "role": "product-draft",
+      "status": "Generated draft differs visibly from brochure photograph; do not present as model-exact. See IMAGE-QA.md.",
+      "intendedFor": "Urilyzer 500 Pro",
+      "sources": [
+        {
+          "document": "02-docs/source-notes/NOTION-REFERENCES.md",
+          "page": 1,
+          "note": "Visual Asset Register; user confirmed Image 17 replacement in chat on 10 November 2026."
+        }
+      ]
+    },
+    {
+      "id": "alfa-09",
+      "filename": "05-source-material/images/ALFA_09_URINALYSIS_URILYZERCELL_CATALOG_DRAFT_cleaned.png",
+      "role": "product-draft",
+      "status": "Generated draft differs visibly from brochure photograph; do not present as model-exact. See IMAGE-QA.md.",
+      "intendedFor": "Urilyzer-Cell",
+      "sources": [
+        {
+          "document": "02-docs/source-notes/NOTION-REFERENCES.md",
+          "page": 1,
+          "note": "Visual Asset Register; user confirmed Image 17 replacement in chat on 10 November 2026."
+        }
+      ]
+    },
+    {
+      "id": "alfa-10",
+      "filename": "05-source-material/images/ALFA_10_HEMATOLOGY_ABACUS380_CATALOG_DRAFT_cleaned.png",
+      "role": "product-draft",
+      "status": "Model-specific draft; compare source before presenting as authentic.",
+      "intendedFor": "Abacus 380",
+      "sources": [
+        {
+          "document": "02-docs/source-notes/NOTION-REFERENCES.md",
+          "page": 1,
+          "note": "Visual Asset Register; user confirmed Image 17 replacement in chat on 10 November 2026."
+        }
+      ]
+    },
+    {
+      "id": "alfa-11",
+      "filename": "05-source-material/images/ALFA_11_GLUCOSE_H1-100_CATALOG_CONCEPT_DRAFT_cleaned.png",
+      "role": "concept",
+      "status": "Illustrative concept; not model-exact.",
+      "intendedFor": "H1-100",
+      "sources": [
+        {
+          "document": "02-docs/source-notes/NOTION-REFERENCES.md",
+          "page": 1,
+          "note": "Visual Asset Register; user confirmed Image 17 replacement in chat on 10 November 2026."
+        }
+      ]
+    },
+    {
+      "id": "alfa-12",
+      "filename": "05-source-material/images/ALFA_12_ESR_EQUIPMENT_CATEGORY_SOURCE_BASED_DRAFT_cleaned.png",
+      "role": "category-editorial",
+      "status": "Editorial/category illustration; not evidence of product identity or packaging.",
+      "intendedFor": "ESR",
+      "sources": [
+        {
+          "document": "02-docs/source-notes/NOTION-REFERENCES.md",
+          "page": 1,
+          "note": "Visual Asset Register; user confirmed Image 17 replacement in chat on 10 November 2026."
+        }
+      ]
+    },
+    {
+      "id": "alfa-13",
+      "filename": "05-source-material/images/ALFA_13_ICT_BIOCHECK_CATEGORY_SOURCE_BASED_DRAFT_cleaned.png",
+      "role": "category-editorial",
+      "status": "Editorial/category illustration; not evidence of product identity or packaging.",
+      "intendedFor": "ICT",
+      "sources": [
+        {
+          "document": "02-docs/source-notes/NOTION-REFERENCES.md",
+          "page": 1,
+          "note": "Visual Asset Register; user confirmed Image 17 replacement in chat on 10 November 2026."
+        }
+      ]
+    },
+    {
+      "id": "alfa-14",
+      "filename": "05-source-material/images/ALFA_14_BLOOD_COLLECTION_TUBES_CHAORAN_CATEGORY_DRAFT_cleaned.png",
+      "role": "category-editorial",
+      "status": "Editorial/category illustration; not evidence of product identity or packaging.",
+      "intendedFor": "Blood Collection",
+      "sources": [
+        {
+          "document": "02-docs/source-notes/NOTION-REFERENCES.md",
+          "page": 1,
+          "note": "Visual Asset Register; user confirmed Image 17 replacement in chat on 10 November 2026."
+        }
+      ]
+    },
+    {
+      "id": "alfa-15",
+      "filename": "05-source-material/images/ALFA_15_CULTURE_MEDIA_ARENA_CATEGORY_SOURCE_BASED_DRAFT_cleaned.png",
+      "role": "category-editorial",
+      "status": "Editorial/category illustration; not evidence of product identity or packaging.",
+      "intendedFor": "Microbial Culture Media",
+      "sources": [
+        {
+          "document": "02-docs/source-notes/NOTION-REFERENCES.md",
+          "page": 1,
+          "note": "Visual Asset Register; user confirmed Image 17 replacement in chat on 10 November 2026."
+        }
+      ]
+    },
+    {
+      "id": "alfa-16",
+      "filename": "05-source-material/images/ALFA_16_IMMUNOLOGY_ASSAY_CATEGORY_EDITORIAL_DRAFT_cleaned.png",
+      "role": "category-editorial",
+      "status": "Editorial/category illustration; not evidence of product identity or packaging.",
+      "intendedFor": "Immunology",
+      "sources": [
+        {
+          "document": "02-docs/source-notes/NOTION-REFERENCES.md",
+          "page": 1,
+          "note": "Visual Asset Register; user confirmed Image 17 replacement in chat on 10 November 2026."
+        }
+      ]
+    },
+    {
+      "id": "alfa-17",
+      "filename": "05-source-material/images/ALFA_17_ANIMAL_CHEMISTRY_EDITORIAL_DRAFT_cleaned.png",
+      "role": "category-editorial",
+      "status": "Editorial/category illustration; not evidence of product identity or packaging.",
+      "intendedFor": "Animal Chemistry",
+      "sources": [
+        {
+          "document": "02-docs/source-notes/NOTION-REFERENCES.md",
+          "page": 1,
+          "note": "Visual Asset Register; user confirmed Image 17 replacement in chat on 10 November 2026."
+        }
+      ]
+    },
+    {
+      "id": "alfa-18",
+      "filename": "05-source-material/images/ALFA_18_COAG_COR50_CINEMATIC_HOMEPAGE_DRAFT_cleaned.png",
+      "role": "cinematic-still",
+      "status": "Flat 2D still; not a 3D mesh.",
+      "intendedFor": "COR 50 Home",
+      "sources": [
+        {
+          "document": "02-docs/source-notes/NOTION-REFERENCES.md",
+          "page": 1,
+          "note": "Visual Asset Register; user confirmed Image 17 replacement in chat on 10 November 2026."
+        }
+      ]
+    },
+    {
+      "id": "alfa-19",
+      "filename": "05-source-material/images/ALFA_19_HEMATOLOGY_ABACUS380_CINEMATIC_PRODUCT_LINE_DRAFT_cleaned.png",
+      "role": "cinematic-still",
+      "status": "Flat 2D still; not a 3D mesh.",
+      "intendedFor": "Abacus 380 Product Line",
+      "sources": [
+        {
+          "document": "02-docs/source-notes/NOTION-REFERENCES.md",
+          "page": 1,
+          "note": "Visual Asset Register; user confirmed Image 17 replacement in chat on 10 November 2026."
+        }
+      ]
+    },
+    {
+      "id": "alfa-20",
+      "filename": "05-source-material/images/ALFA_20_URINALYSIS_URILYZERCELL_CINEMATIC_FEATURE_DRAFT_cleaned.png",
+      "role": "cinematic-still",
+      "status": "Flat 2D still; not a 3D mesh.",
+      "intendedFor": "Urilyzer-Cell featured product",
+      "sources": [
+        {
+          "document": "02-docs/source-notes/NOTION-REFERENCES.md",
+          "page": 1,
+          "note": "Visual Asset Register; user confirmed Image 17 replacement in chat on 10 November 2026."
+        }
+      ]
+    },
+    {
+      "id": "alfa-21",
+      "filename": "05-source-material/images/ALFA_21_ABOUT_LAB_PROFESSIONALS_EDITORIAL_DRAFT_cleaned.png",
+      "role": "people-editorial",
+      "status": "Illustrative people; not actual staff or premises.",
+      "intendedFor": "About",
+      "sources": [
+        {
+          "document": "02-docs/source-notes/NOTION-REFERENCES.md",
+          "page": 1,
+          "note": "Visual Asset Register; user confirmed Image 17 replacement in chat on 10 November 2026."
+        }
+      ]
+    },
+    {
+      "id": "alfa-22",
+      "filename": "05-source-material/images/ALFA_22_CAREERS_SCIENTIFIC_WORKPLACE_EDITORIAL_DRAFT_cleaned.png",
+      "role": "people-editorial",
+      "status": "Illustrative people; not actual staff or premises.",
+      "intendedFor": "Careers",
+      "sources": [
+        {
+          "document": "02-docs/source-notes/NOTION-REFERENCES.md",
+          "page": 1,
+          "note": "Visual Asset Register; user confirmed Image 17 replacement in chat on 10 November 2026."
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "coagulation-cor-50",
+      "name": "COR 50",
+      "categoryId": "coagulation",
+      "subcategory": "Instruments",
+      "kind": "instrument",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 2
+      },
+      "inquiryContext": {
+        "product": "COR 50",
+        "categoryId": "coagulation"
+      },
+      "manufacturer": "Wiener Lab",
+      "specifications": [
+        "23 reagent positions",
+        "27 samples",
+        "10 tests/cycle",
+        "60 tests/hour"
+      ],
+      "mediaIds": [
+        "alfa-02",
+        "alfa-18"
+      ],
+      "description": "Coagulation analyzer."
+    },
+    {
+      "id": "coagulation-sc-40",
+      "name": "SC-40",
+      "categoryId": "coagulation",
+      "subcategory": "Instruments",
+      "kind": "instrument",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 2
+      },
+      "inquiryContext": {
+        "product": "SC-40",
+        "categoryId": "coagulation"
+      },
+      "manufacturer": "Wiener Lab",
+      "specifications": [
+        "4 channels",
+        "Rapid testing",
+        "Small sample volume"
+      ],
+      "mediaIds": [
+        "alfa-03"
+      ],
+      "description": "Four-channel coagulation instrument."
+    },
+    {
+      "id": "clinical-chemistry-metro-lab-1600-dr",
+      "name": "Metro-Lab 1600 DR",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Instruments",
+      "kind": "instrument",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 2
+      },
+      "inquiryContext": {
+        "product": "Metro-Lab 1600 DR",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab",
+      "specifications": [
+        "132 programmable tests",
+        "9 filters",
+        "Wide photometric range"
+      ],
+      "mediaIds": [
+        "alfa-04"
+      ],
+      "description": "Clinical chemistry instrument with programmable tests."
+    },
+    {
+      "id": "clinical-chemistry-cm-250",
+      "name": "CM 250",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Instruments",
+      "kind": "instrument",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 2
+      },
+      "inquiryContext": {
+        "product": "CM 250",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab",
+      "specifications": [
+        "230 tests/hour",
+        "48 reagent and sample positions",
+        "More than 50 parameters",
+        "Auto washing and drying"
+      ],
+      "mediaIds": [
+        "alfa-05"
+      ],
+      "description": "Clinical chemistry analyzer."
+    },
+    {
+      "id": "clinical-chemistry-cm320i",
+      "name": "CM320i",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Instruments",
+      "kind": "instrument",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 2
+      },
+      "inquiryContext": {
+        "product": "CM320i",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab",
+      "specifications": [
+        "480 tests/hour",
+        "48 reagent positions",
+        "48 sample positions",
+        "Clot detection",
+        "Preheated probes"
+      ],
+      "mediaIds": [
+        "alfa-06"
+      ],
+      "description": "Clinical chemistry analyzer."
+    },
+    {
+      "id": "hematology-abacus-380",
+      "name": "Abacus 380",
+      "categoryId": "hematology",
+      "subcategory": "3-Part Analyzer",
+      "kind": "instrument",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Abacus 380",
+        "categoryId": "hematology"
+      },
+      "manufacturer": "Diatron",
+      "specifications": [
+        "3-part analyzer",
+        "80 tests/hour",
+        "Automatic sample rotor",
+        "22 parameters: WBC, LYM, MID, GRA, LYM%, MID%, GRA%, RBC, HCT, MCV, HGB, MCH, MCHC, PLT, PCT, MPV, P-LCC, P-LCR, RDW-CV, RDW-SD, PDW-CV, PDW-SD"
+      ],
+      "mediaIds": [
+        "alfa-10",
+        "alfa-19"
+      ],
+      "description": "Three-part hematology analyzer."
+    },
+    {
+      "id": "urinalysis-urilyzer-100-pro",
+      "name": "Urilyzer 100 Pro",
+      "categoryId": "urinalysis",
+      "subcategory": "Urine Analysis",
+      "kind": "instrument",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 2
+      },
+      "inquiryContext": {
+        "product": "Urilyzer 100 Pro",
+        "categoryId": "urinalysis"
+      },
+      "manufacturer": "Analyticon",
+      "specifications": [
+        "Compact strip reader"
+      ],
+      "mediaIds": [
+        "alfa-07"
+      ],
+      "verification": "Image draft differs visibly from brochure photograph; do not present it as model-exact. See Stage 02 IMAGE-QA.",
+      "description": "Compact urine strip reader."
+    },
+    {
+      "id": "urinalysis-urilyzer-500-pro",
+      "name": "Urilyzer 500 Pro",
+      "categoryId": "urinalysis",
+      "subcategory": "Urine Analysis",
+      "kind": "instrument",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 2
+      },
+      "inquiryContext": {
+        "product": "Urilyzer 500 Pro",
+        "categoryId": "urinalysis"
+      },
+      "manufacturer": "Analyticon",
+      "specifications": [
+        "Advanced strip reader"
+      ],
+      "mediaIds": [
+        "alfa-08"
+      ],
+      "verification": "Image draft differs visibly from brochure photograph; do not present it as model-exact. See Stage 02 IMAGE-QA.",
+      "description": "Advanced urine strip reader."
+    },
+    {
+      "id": "urinalysis-urilyzer-cell",
+      "name": "Urilyzer-Cell",
+      "categoryId": "urinalysis",
+      "subcategory": "Urine Sediment / Urine Analysis",
+      "kind": "instrument",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 2
+      },
+      "inquiryContext": {
+        "product": "Urilyzer-Cell",
+        "categoryId": "urinalysis"
+      },
+      "manufacturer": "Analyticon",
+      "specifications": [
+        "Cuvette-based automatic microscopy and image processing"
+      ],
+      "mediaIds": [
+        "alfa-09",
+        "alfa-20"
+      ],
+      "verification": "Image draft differs visibly from brochure photograph; do not present it as model-exact. See Stage 02 IMAGE-QA.",
+      "description": "Cuvette-based urinalysis system with automated microscopy and image processing."
+    },
+    {
+      "id": "blood-glucose-monitoring-h1-100",
+      "name": "H1-100",
+      "categoryId": "blood-glucose-monitoring",
+      "subcategory": "Glucose Meter",
+      "kind": "instrument",
+      "source": {
+        "document": "05-source-material/references/Products Mind Map Diagram.png",
+        "page": 1
+      },
+      "inquiryContext": {
+        "product": "H1-100",
+        "categoryId": "blood-glucose-monitoring"
+      },
+      "mediaIds": [
+        "alfa-11"
+      ],
+      "verification": "Name from client mind map; visual is a concept and not model-exact.",
+      "description": "Glucose meter named in the client product map."
+    },
+    {
+      "id": "esr-esr-equipment",
+      "name": "ESR equipment",
+      "categoryId": "esr",
+      "subcategory": "Erythrocyte ESR",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 2
+      },
+      "inquiryContext": {
+        "product": "ESR equipment",
+        "categoryId": "esr"
+      },
+      "specifications": [
+        "No sample aspiration",
+        "True Westergren method",
+        "No consumables",
+        "64 tests/hour",
+        "Barcode reader"
+      ],
+      "mediaIds": [
+        "alfa-12"
+      ],
+      "verification": "Brochure does not unambiguously name an individual model.",
+      "description": "Equipment for erythrocyte sedimentation testing."
+    },
+    {
+      "id": "coagulation-aptt",
+      "name": "APTT",
+      "categoryId": "coagulation",
+      "subcategory": "Hemostasis",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "APTT",
+        "categoryId": "coagulation"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "coagulation-aptt-liquid",
+      "name": "APTT Liquid",
+      "categoryId": "coagulation",
+      "subcategory": "Hemostasis",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "APTT Liquid",
+        "categoryId": "coagulation"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "coagulation-pt-prothrombin-time",
+      "name": "PT (Prothrombin Time)",
+      "categoryId": "coagulation",
+      "subcategory": "Hemostasis",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "PT (Prothrombin Time)",
+        "categoryId": "coagulation"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "coagulation-trombin-time",
+      "name": "Trombin Time",
+      "categoryId": "coagulation",
+      "subcategory": "Hemostasis",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Trombin Time",
+        "categoryId": "coagulation"
+      },
+      "manufacturer": "Wiener Lab",
+      "verification": "Transcribed as printed; unusual spelling or notation needs source/manufacturer confirmation before public use."
+    },
+    {
+      "id": "coagulation-d-dimer-tubitest",
+      "name": "D-Dimer Tubitest",
+      "categoryId": "coagulation",
+      "subcategory": "Hemostasis",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "D-Dimer Tubitest",
+        "categoryId": "coagulation"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "coagulation-fibrinogen-kit",
+      "name": "Fibrinogen kit",
+      "categoryId": "coagulation",
+      "subcategory": "Hemostasis",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Fibrinogen kit",
+        "categoryId": "coagulation"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "coagulation-la-screen",
+      "name": "La Screen",
+      "categoryId": "coagulation",
+      "subcategory": "Hemostasis",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "La Screen",
+        "categoryId": "coagulation"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "coagulation-la-confirm",
+      "name": "La Confirm",
+      "categoryId": "coagulation",
+      "subcategory": "Hemostasis",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "La Confirm",
+        "categoryId": "coagulation"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "coagulation-la-control",
+      "name": "La Control",
+      "categoryId": "coagulation",
+      "subcategory": "Hemostasis",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "La Control",
+        "categoryId": "coagulation"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "coagulation-chrome-atiii",
+      "name": "Chrome ATIII",
+      "categoryId": "coagulation",
+      "subcategory": "Hemostasis",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Chrome ATIII",
+        "categoryId": "coagulation"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "coagulation-chrome-protien-c",
+      "name": "Chrome Protien C",
+      "categoryId": "coagulation",
+      "subcategory": "Hemostasis",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Chrome Protien C",
+        "categoryId": "coagulation"
+      },
+      "manufacturer": "Wiener Lab",
+      "verification": "Transcribed as printed; unusual spelling or notation needs source/manufacturer confirmation before public use."
+    },
+    {
+      "id": "coagulation-factor-ii-deficient-plasma",
+      "name": "Factor II Deficient Plasma",
+      "categoryId": "coagulation",
+      "subcategory": "Hemostasis",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Factor II Deficient Plasma",
+        "categoryId": "coagulation"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "coagulation-factor-v-deficient-plasma",
+      "name": "Factor V Deficient Plasma",
+      "categoryId": "coagulation",
+      "subcategory": "Hemostasis",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Factor V Deficient Plasma",
+        "categoryId": "coagulation"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "coagulation-factor-vii-deficient-plasma",
+      "name": "Factor VII Deficient Plasma",
+      "categoryId": "coagulation",
+      "subcategory": "Hemostasis",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Factor VII Deficient Plasma",
+        "categoryId": "coagulation"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "coagulation-factor-viii-deficient-plasma",
+      "name": "Factor VIII Deficient Plasma",
+      "categoryId": "coagulation",
+      "subcategory": "Hemostasis",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Factor VIII Deficient Plasma",
+        "categoryId": "coagulation"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "coagulation-factor-ix-deficient-plasma",
+      "name": "Factor IX Deficient Plasma",
+      "categoryId": "coagulation",
+      "subcategory": "Hemostasis",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Factor IX Deficient Plasma",
+        "categoryId": "coagulation"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "coagulation-factor-x-deficient-plasma",
+      "name": "Factor X Deficient Plasma",
+      "categoryId": "coagulation",
+      "subcategory": "Hemostasis",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Factor X Deficient Plasma",
+        "categoryId": "coagulation"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "coagulation-factor-xi-deficient-plasma",
+      "name": "Factor XI Deficient Plasma",
+      "categoryId": "coagulation",
+      "subcategory": "Hemostasis",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Factor XI Deficient Plasma",
+        "categoryId": "coagulation"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "coagulation-factor-xii-deficient-plasma",
+      "name": "Factor XII Deficient Plasma",
+      "categoryId": "coagulation",
+      "subcategory": "Hemostasis",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Factor XII Deficient Plasma",
+        "categoryId": "coagulation"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "coagulation-coagulation-control-normal",
+      "name": "Coagulation Control Normal",
+      "categoryId": "coagulation",
+      "subcategory": "Coagulation controls",
+      "kind": "control",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Coagulation Control Normal",
+        "categoryId": "coagulation"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "coagulation-coagulation-control-abnormal",
+      "name": "Coagulation Control Abnormal",
+      "categoryId": "coagulation",
+      "subcategory": "Coagulation controls",
+      "kind": "control",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Coagulation Control Abnormal",
+        "categoryId": "coagulation"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "coagulation-coagulation-calibrator",
+      "name": "Coagulation Calibrator",
+      "categoryId": "coagulation",
+      "subcategory": "Coagulation controls",
+      "kind": "control",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Coagulation Calibrator",
+        "categoryId": "coagulation"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-alp",
+      "name": "ALP",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "LFT",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "ALP",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-cholinesterase",
+      "name": "Cholinesterase",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "LFT",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Cholinesterase",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-got-ast",
+      "name": "GOT/AST",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "LFT",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "GOT/AST",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-gpt-alt",
+      "name": "GPT/ALT",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "LFT",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "GPT/ALT",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-gamma-gt",
+      "name": "Gamma-GT",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "LFT",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Gamma-GT",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-albumin",
+      "name": "Albumin",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "LFT",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Albumin",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-direct-bilirubin",
+      "name": "Direct Bilirubin",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "LFT",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Direct Bilirubin",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-total-bilirubin",
+      "name": "Total Bilirubin",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "LFT",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Total Bilirubin",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-total-protein",
+      "name": "Total Protein",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "LFT",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Total Protein",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-lactate",
+      "name": "Lactate",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "LFT",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Lactate",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-immunoglobulin-a",
+      "name": "Immunoglobulin A",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Immunological",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Immunoglobulin A",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-immunoglobulin-e",
+      "name": "Immunoglobulin E",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Immunological",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Immunoglobulin E",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-immunoglobulin-g",
+      "name": "Immunoglobulin G",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Immunological",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Immunoglobulin G",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-immunoglobulin-m",
+      "name": "Immunoglobulin M",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Immunological",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Immunoglobulin M",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-complement-c3",
+      "name": "Complement C3",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Immunological",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Complement C3",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-complement-c4",
+      "name": "Complement C4",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Immunological",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Complement C4",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-agp",
+      "name": "AGP",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Immunological",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "AGP",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-creatinine",
+      "name": "Creatinine",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "RFT",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Creatinine",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-creatinine-enzymatic",
+      "name": "Creatinine (Enzymatic)",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "RFT",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Creatinine (Enzymatic)",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-urinary-csf-proteins",
+      "name": "Urinary/CSF Proteins",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "RFT",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Urinary/CSF Proteins",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-urea",
+      "name": "Urea",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "RFT",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Urea",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-uric-acid",
+      "name": "Uric acid",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "RFT",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Uric acid",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-microalbumin",
+      "name": "Microalbumin",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "RFT",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Microalbumin",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-cystatin-c",
+      "name": "Cystatin C",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "RFT",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Cystatin C",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-calcium",
+      "name": "Calcium",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Inorganic / anemia",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Calcium",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-iron",
+      "name": "Iron",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Inorganic / anemia",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Iron",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-phosphorus",
+      "name": "Phosphorus",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Inorganic / anemia",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Phosphorus",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-lithium",
+      "name": "Lithium",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Inorganic / anemia",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Lithium",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-magnesium",
+      "name": "Magnesium",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Inorganic / anemia",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Magnesium",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-transferrin",
+      "name": "Transferrin",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Inorganic / anemia",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Transferrin",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-uibc-tibc",
+      "name": "UIBC/TIBC",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Inorganic / anemia",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "UIBC/TIBC",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-ferritin",
+      "name": "Ferritin",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Inorganic / anemia",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Ferritin",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-ammonium",
+      "name": "Ammonium",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Inorganic / anemia",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Ammonium",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-carbon-dioxide",
+      "name": "Carbon dioxide",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Inorganic / anemia",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Carbon dioxide",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-sodium",
+      "name": "Sodium",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Inorganic / anemia",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Sodium",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-potassium",
+      "name": "Potassium",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Inorganic / anemia",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Potassium",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-chloride",
+      "name": "Chloride",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Inorganic / anemia",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Chloride",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-creatine-kinase-mb",
+      "name": "Creatine Kinase MB",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Cardiac",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Creatine Kinase MB",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-creatine-kinase",
+      "name": "Creatine Kinase",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Cardiac",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Creatine Kinase",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-ldh",
+      "name": "LDH",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Cardiac",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "LDH",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-homocysteine",
+      "name": "Homocysteine",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Cardiac",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Homocysteine",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-c-reactive-phs",
+      "name": "C-Reactive PHS",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Cardiac",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "C-Reactive PHS",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab",
+      "verification": "Transcribed as printed; unusual spelling or notation needs source/manufacturer confirmation before public use."
+    },
+    {
+      "id": "clinical-chemistry-antistreptolysin-o",
+      "name": "Antistreptolysin O",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Rheumatic",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Antistreptolysin O",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-rheumatoid-factor",
+      "name": "Rheumatoid Factor",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Rheumatic",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Rheumatoid Factor",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-c-reactive-protein",
+      "name": "C Reactive Protein",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Rheumatic",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "C Reactive Protein",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-fructosamine",
+      "name": "Fructosamine",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Diabetic",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Fructosamine",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-glucose",
+      "name": "Glucose",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Diabetic",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Glucose",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-hba1c",
+      "name": "HbA1c",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Diabetic",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "HbA1c",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-total-cholesterol",
+      "name": "Total Cholesterol",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Lipid",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Total Cholesterol",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-hdl-cholesterol",
+      "name": "HDL Cholesterol",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Lipid",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "HDL Cholesterol",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-ldl-cholesterol",
+      "name": "LDL Cholesterol",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Lipid",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "LDL Cholesterol",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-triglycerides",
+      "name": "Triglycerides",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Lipid",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Triglycerides",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-amylase",
+      "name": "Amylase",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Pancreatic",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Amylase",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-lipase",
+      "name": "Lipase",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Pancreatic",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Lipase",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-a1-antitrypsin-turbitest-aa",
+      "name": "a1-Antitrypsin Turbitest AA",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Turbidimetry",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "a1-Antitrypsin Turbitest AA",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-a2-macroglobulin-turbitest-aa",
+      "name": "a2-Macroglobulin Turbitest AA",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Turbidimetry",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "a2-Macroglobulin Turbitest AA",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-agp-turbitest-aa",
+      "name": "AGP Turbitest AA",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Turbidimetry",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "AGP Turbitest AA",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-apo-a-i-turbitest-aa",
+      "name": "APO A-I Turbitest AA",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Turbidimetry",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "APO A-I Turbitest AA",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-apo-b-turbitest-aa",
+      "name": "APO B Turbitest AA",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Turbidimetry",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "APO B Turbitest AA",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-aso-latex-turbitest-aa",
+      "name": "ASO Latex Turbitest AA",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Turbidimetry",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "ASO Latex Turbitest AA",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-crp-hs-turbitest-aa",
+      "name": "CRP hs Turbitest AA",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Turbidimetry",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "CRP hs Turbitest AA",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-hdl-fast-calibrator",
+      "name": "HDL Fast Calibrator",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Turbidimetry",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "HDL Fast Calibrator",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-fr-latex-turbitest-aa",
+      "name": "FR Latex Turbitest AA",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Turbidimetry",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "FR Latex Turbitest AA",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-microalbumin-turbitest-aa",
+      "name": "Microalbumin Turbitest AA",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Turbidimetry",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Microalbumin Turbitest AA",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-hba1c-turbitest-aa",
+      "name": "HbA1c Turbitest AA",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Turbidimetry",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "HbA1c Turbitest AA",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-trf-turbitest-aa",
+      "name": "TRF Turbitest AA",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Turbidimetry",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "TRF Turbitest AA",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-homocysteine-2",
+      "name": "Homocysteine",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Turbidimetry",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Homocysteine",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-iga-turbitest-aa",
+      "name": "IgA Turbitest AA",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Turbidimetry",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "IgA Turbitest AA",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-ige-turbitest-aa",
+      "name": "IgE Turbitest AA",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Turbidimetry",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "IgE Turbitest AA",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-igg-turbitest-aa",
+      "name": "IgG Turbitest AA",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Turbidimetry",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "IgG Turbitest AA",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-igm-turbitest-aa",
+      "name": "IgM Turbitest AA",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Turbidimetry",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "IgM Turbitest AA",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "clinical-chemistry-pcr-turbitest-aa",
+      "name": "PCR Turbitest AA",
+      "categoryId": "clinical-chemistry",
+      "subcategory": "Turbidimetry",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "PCR Turbitest AA",
+        "categoryId": "clinical-chemistry"
+      },
+      "manufacturer": "Wiener Lab"
+    },
+    {
+      "id": "urinalysis-combi-screen-10-sl",
+      "name": "Combi Screen 10 SL",
+      "categoryId": "urinalysis",
+      "subcategory": "Urine Strips",
+      "kind": "consumable",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Combi Screen 10 SL",
+        "categoryId": "urinalysis"
+      },
+      "manufacturer": "Analyticon"
+    },
+    {
+      "id": "urinalysis-combi-screen-10-sl-a",
+      "name": "Combi Screen 10 SL-A",
+      "categoryId": "urinalysis",
+      "subcategory": "Urine Strips",
+      "kind": "consumable",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Combi Screen 10 SL-A",
+        "categoryId": "urinalysis"
+      },
+      "manufacturer": "Analyticon"
+    },
+    {
+      "id": "urinalysis-combi-screen-11sys",
+      "name": "Combi Screen 11SYS",
+      "categoryId": "urinalysis",
+      "subcategory": "Urine Strips",
+      "kind": "consumable",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Combi Screen 11SYS",
+        "categoryId": "urinalysis"
+      },
+      "manufacturer": "Analyticon"
+    },
+    {
+      "id": "urinalysis-combi-scren-drop-check",
+      "name": "Combi scren drop check",
+      "categoryId": "urinalysis",
+      "subcategory": "Controls",
+      "kind": "control",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Combi scren drop check",
+        "categoryId": "urinalysis"
+      },
+      "manufacturer": "Analyticon",
+      "verification": "Transcribed as printed; unusual spelling or notation needs source/manufacturer confirmation before public use."
+    },
+    {
+      "id": "urinalysis-combi-screen-dip-check",
+      "name": "Combi screen dip check",
+      "categoryId": "urinalysis",
+      "subcategory": "Controls",
+      "kind": "control",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Combi screen dip check",
+        "categoryId": "urinalysis"
+      },
+      "manufacturer": "Analyticon"
+    },
+    {
+      "id": "hematology-diatro-dii-diff-20-l",
+      "name": "Diatro*DII-DIFF - 20 L",
+      "categoryId": "hematology",
+      "subcategory": "Reagents",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Diatro*DII-DIFF - 20 L",
+        "categoryId": "hematology"
+      },
+      "manufacturer": "Diatron",
+      "verification": "Transcribed as printed; unusual spelling or notation needs source/manufacturer confirmation before public use."
+    },
+    {
+      "id": "hematology-diatro-lyse-diff-1l-hk",
+      "name": "Diatro*Lyse-DIFF - 1L (HK)",
+      "categoryId": "hematology",
+      "subcategory": "Reagents",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Diatro*Lyse-DIFF - 1L (HK)",
+        "categoryId": "hematology"
+      },
+      "manufacturer": "Diatron"
+    },
+    {
+      "id": "hematology-diatro-cleaner-1l",
+      "name": "Diatro*Cleaner - 1L",
+      "categoryId": "hematology",
+      "subcategory": "Reagents",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Diatro*Cleaner - 1L",
+        "categoryId": "hematology"
+      },
+      "manufacturer": "Diatron"
+    },
+    {
+      "id": "hematology-diatro-hypoclean-cc",
+      "name": "Diatro Hypoclean CC",
+      "categoryId": "hematology",
+      "subcategory": "Reagents",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Diatro Hypoclean CC",
+        "categoryId": "hematology"
+      },
+      "manufacturer": "Diatron"
+    },
+    {
+      "id": "hematology-diacon-3-hematology-control-low",
+      "name": "Diacon 3 Hematology Control LOW",
+      "categoryId": "hematology",
+      "subcategory": "Controls",
+      "kind": "control",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Diacon 3 Hematology Control LOW",
+        "categoryId": "hematology"
+      },
+      "manufacturer": "Diatron"
+    },
+    {
+      "id": "hematology-diacon-3-hematology-control-normal",
+      "name": "Diacon 3 Hematology Control NORMAL",
+      "categoryId": "hematology",
+      "subcategory": "Controls",
+      "kind": "control",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Diacon 3 Hematology Control NORMAL",
+        "categoryId": "hematology"
+      },
+      "manufacturer": "Diatron"
+    },
+    {
+      "id": "hematology-diacon-3-hematology-control-high",
+      "name": "Diacon 3 Hematology Control HIGH",
+      "categoryId": "hematology",
+      "subcategory": "Controls",
+      "kind": "control",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Diacon 3 Hematology Control HIGH",
+        "categoryId": "hematology"
+      },
+      "manufacturer": "Diatron"
+    },
+    {
+      "id": "hematology-diacon-3-hematology-control-set-l-n-h",
+      "name": "Diacon 3 Hematology Control Set (L-N-H)",
+      "categoryId": "hematology",
+      "subcategory": "Controls",
+      "kind": "control",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Diacon 3 Hematology Control Set (L-N-H)",
+        "categoryId": "hematology"
+      },
+      "manufacturer": "Diatron"
+    },
+    {
+      "id": "ict-hbs-ag-device-serum-plasma",
+      "name": "HBs Ag Device Serum/Plasma",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing",
+      "kind": "test",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "HBs Ag Device Serum/Plasma",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck"
+    },
+    {
+      "id": "ict-hvc-device-serum-plasma",
+      "name": "HVC Device Serum/Plasma",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing",
+      "kind": "test",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "HVC Device Serum/Plasma",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck",
+      "verification": "Transcribed as printed; unusual spelling or notation needs source/manufacturer confirmation before public use."
+    },
+    {
+      "id": "ict-h-pylori-ab-device-serum-plasma",
+      "name": "H Pylori ab Device Serum/Plasma",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing",
+      "kind": "test",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "H Pylori ab Device Serum/Plasma",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck"
+    },
+    {
+      "id": "ict-h-pylori-ag-device-serum-plasma",
+      "name": "H Pylori ag Device Serum/Plasma",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing",
+      "kind": "test",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "H Pylori ag Device Serum/Plasma",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck"
+    },
+    {
+      "id": "ict-tb-ab-igg-igm-device-serum-plasma",
+      "name": "TB Ab IgG/IgM Device Serum/Plasma",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing",
+      "kind": "test",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "TB Ab IgG/IgM Device Serum/Plasma",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck"
+    },
+    {
+      "id": "ict-typhidot-igg-igm-device-serum-plasma",
+      "name": "Typhidot IgG/IgM Device Serum/Plasma",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing",
+      "kind": "test",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Typhidot IgG/IgM Device Serum/Plasma",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck"
+    },
+    {
+      "id": "ict-toxoplasma-igg-igm-device-serum-plasma",
+      "name": "Toxoplasma IgG/IgM Device Serum/Plasma",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing",
+      "kind": "test",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Toxoplasma IgG/IgM Device Serum/Plasma",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck"
+    },
+    {
+      "id": "ict-malaria-pf-pv-ab-device",
+      "name": "Malaria pf/pv Ab Device",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing",
+      "kind": "test",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Malaria pf/pv Ab Device",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck"
+    },
+    {
+      "id": "ict-malaria-pf-pf-ag-device",
+      "name": "Malaria pf/pf Ag Device",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing",
+      "kind": "test",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Malaria pf/pf Ag Device",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck",
+      "verification": "Transcribed as printed; unusual spelling or notation needs source/manufacturer confirmation before public use."
+    },
+    {
+      "id": "ict-hiv-12-ab-device-serum-plasma",
+      "name": "HIV ½ Ab Device Serum/Plasma",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing",
+      "kind": "test",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "HIV ½ Ab Device Serum/Plasma",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck"
+    },
+    {
+      "id": "ict-syphilis-rpr-device-serum-plasma",
+      "name": "Syphilis (RPR) Device Serum/Plasma",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing",
+      "kind": "test",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Syphilis (RPR) Device Serum/Plasma",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck"
+    },
+    {
+      "id": "ict-dangue-igg-igm-device-serum-plasma",
+      "name": "Dangue IgG/IgM Device Serum/Plasma",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing",
+      "kind": "test",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Dangue IgG/IgM Device Serum/Plasma",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck",
+      "verification": "Transcribed as printed; unusual spelling or notation needs source/manufacturer confirmation before public use."
+    },
+    {
+      "id": "ict-pregnancy-strips",
+      "name": "Pregnancy Strips",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing",
+      "kind": "test",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Pregnancy Strips",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck"
+    },
+    {
+      "id": "blood-collection-k3edta-cbc-3-ml",
+      "name": "K3EDTA (CBC) 3 ml",
+      "categoryId": "blood-collection",
+      "subcategory": "Collection products",
+      "kind": "consumable",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "K3EDTA (CBC) 3 ml",
+        "categoryId": "blood-collection"
+      },
+      "manufacturer": "Chaoran Medical"
+    },
+    {
+      "id": "blood-collection-gel-4-ml",
+      "name": "Gel 4 ml",
+      "categoryId": "blood-collection",
+      "subcategory": "Collection products",
+      "kind": "consumable",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Gel 4 ml",
+        "categoryId": "blood-collection"
+      },
+      "manufacturer": "Chaoran Medical"
+    },
+    {
+      "id": "blood-collection-lithium-heparin-3-ml",
+      "name": "Lithium Heparin 3 ml",
+      "categoryId": "blood-collection",
+      "subcategory": "Collection products",
+      "kind": "consumable",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Lithium Heparin 3 ml",
+        "categoryId": "blood-collection"
+      },
+      "manufacturer": "Chaoran Medical"
+    },
+    {
+      "id": "blood-collection-pt-tube-1-8-ml",
+      "name": "PT Tube 1.8 ml",
+      "categoryId": "blood-collection",
+      "subcategory": "Collection products",
+      "kind": "consumable",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "PT Tube 1.8 ml",
+        "categoryId": "blood-collection"
+      },
+      "manufacturer": "Chaoran Medical"
+    },
+    {
+      "id": "blood-collection-glucose-tube-4-ml",
+      "name": "Glucose Tube 4 ml",
+      "categoryId": "blood-collection",
+      "subcategory": "Collection products",
+      "kind": "consumable",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Glucose Tube 4 ml",
+        "categoryId": "blood-collection"
+      },
+      "manufacturer": "Chaoran Medical"
+    },
+    {
+      "id": "blood-collection-clot-activator-4-ml",
+      "name": "Clot Activator 4 ml",
+      "categoryId": "blood-collection",
+      "subcategory": "Collection products",
+      "kind": "consumable",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Clot Activator 4 ml",
+        "categoryId": "blood-collection"
+      },
+      "manufacturer": "Chaoran Medical"
+    },
+    {
+      "id": "blood-collection-plain-tube-4-ml",
+      "name": "Plain tube 4 ml",
+      "categoryId": "blood-collection",
+      "subcategory": "Collection products",
+      "kind": "consumable",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Plain tube 4 ml",
+        "categoryId": "blood-collection"
+      },
+      "manufacturer": "Chaoran Medical"
+    },
+    {
+      "id": "blood-collection-esr-1-6-ml",
+      "name": "ESR 1.6 ml",
+      "categoryId": "blood-collection",
+      "subcategory": "Collection products",
+      "kind": "consumable",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "ESR 1.6 ml",
+        "categoryId": "blood-collection"
+      },
+      "manufacturer": "Chaoran Medical"
+    },
+    {
+      "id": "unplaced-anti-a-b-d",
+      "name": "Anti A B D",
+      "categoryId": null,
+      "subcategory": "Anti sera",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Anti A B D",
+        "categoryId": null
+      },
+      "verification": "Brochure-supported; public placement and manufacturer not established."
+    },
+    {
+      "id": "microbial-culture-media-nutrient-agar",
+      "name": "Nutrient Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "General-purpose media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Nutrient Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-nutrient-broth",
+      "name": "Nutrient Broth",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "General-purpose media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Nutrient Broth",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-tryptic-soy-agar-tsa",
+      "name": "Tryptic Soy Agar (TSA)",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "General-purpose media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Tryptic Soy Agar (TSA)",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-tryptic-soy-broth-tsb",
+      "name": "Tryptic Soy Broth (TSB)",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "General-purpose media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Tryptic Soy Broth (TSB)",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-luria-bertani-lb-agar",
+      "name": "Luria Bertani (LB) Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "General-purpose media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Luria Bertani (LB) Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-luria-bertani-lb-broth",
+      "name": "Luria Bertani (LB) Broth",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "General-purpose media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Luria Bertani (LB) Broth",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-peptone-water",
+      "name": "Peptone Water",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "General-purpose media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Peptone Water",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-peptone-universal",
+      "name": "Peptone Universal",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "General-purpose media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Peptone Universal",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-peptone-bacteriological",
+      "name": "Peptone Bacteriological",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "General-purpose media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Peptone Bacteriological",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-buffered-peptone-water",
+      "name": "Buffered Peptone Water",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "General-purpose media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Buffered Peptone Water",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-tryptone",
+      "name": "Tryptone",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "General-purpose media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Tryptone",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-tryptone-water",
+      "name": "Tryptone Water",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "General-purpose media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Tryptone Water",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-beef-extract",
+      "name": "Beef Extract",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "General-purpose media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Beef Extract",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-yeast-extract",
+      "name": "Yeast Extract",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "General-purpose media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Yeast Extract",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-blood-agar-base",
+      "name": "Blood Agar Base",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Enriched media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Blood Agar Base",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-chocolate-agar-base",
+      "name": "Chocolate Agar Base",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Enriched media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Chocolate Agar Base",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-columbia-agar-base",
+      "name": "Columbia Agar Base",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Enriched media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Columbia Agar Base",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-brain-heart-infusion-bhi-agar",
+      "name": "Brain Heart Infusion (BHI) Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Enriched media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Brain Heart Infusion (BHI) Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-brain-heart-infusion-bhi-broth",
+      "name": "Brain Heart Infusion (BHI) Broth",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Enriched media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Brain Heart Infusion (BHI) Broth",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-cooked-meat-agar",
+      "name": "Cooked Meat Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Enriched media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Cooked Meat Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-campylobacter-agar-base",
+      "name": "Campylobacter Agar Base",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Fastidious",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Campylobacter Agar Base",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-campylobacter-supplement",
+      "name": "Campylobacter Supplement",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Fastidious",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Campylobacter Supplement",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-tcbs-agar",
+      "name": "TCBS Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Fastidious",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "TCBS Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-chocolate-agar-base-2",
+      "name": "Chocolate Agar Base",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Fastidious",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Chocolate Agar Base",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-cled-agar",
+      "name": "CLED Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Fastidious",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "CLED Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-mrs-agar",
+      "name": "MRS Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Fastidious",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "MRS Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-mrs-broth",
+      "name": "MRS Broth",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Fastidious",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "MRS Broth",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-alkaline-peptone-water",
+      "name": "Alkaline Peptone Water",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Enrichment media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Alkaline Peptone Water",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-buffered-peptone-water-2",
+      "name": "Buffered Peptone Water",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Enrichment media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Buffered Peptone Water",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-macconkey-broth",
+      "name": "MacConkey Broth",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Enrichment media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "MacConkey Broth",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-lactose-broth",
+      "name": "Lactose Broth",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Enrichment media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Lactose Broth",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-triple-sugar-iron-tsi-agar",
+      "name": "Triple Sugar Iron (TSI) Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Biochemical test media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Triple Sugar Iron (TSI) Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-sulfur-indole-motility-sim",
+      "name": "Sulfur Indole Motility (SIM)",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Biochemical test media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Sulfur Indole Motility (SIM)",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-motility-indole-ornithine-mio",
+      "name": "Motility Indole Ornithine (MIO)",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Biochemical test media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Motility Indole Ornithine (MIO)",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-urea-agar-base",
+      "name": "Urea Agar Base",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Biochemical test media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Urea Agar Base",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-urea-broth-base",
+      "name": "Urea Broth Base",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Biochemical test media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Urea Broth Base",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-simmons-citrate-agar",
+      "name": "Simmons Citrate Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Biochemical test media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Simmons Citrate Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-tryptone-bile-agar",
+      "name": "Tryptone Bile Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Biochemical test media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Tryptone Bile Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-mannitol-salt-agar-msa",
+      "name": "Mannitol Salt Agar (MSA)",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Biochemical test media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Mannitol Salt Agar (MSA)",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-cetrimide-agar",
+      "name": "Cetrimide Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Selective media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Cetrimide Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-macconkey-agar-with-c-v",
+      "name": "MacConkey Agar with (C.V.)",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Selective media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "MacConkey Agar with (C.V.)",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-macconkey-agar-without-c-v",
+      "name": "MacConkey Agar without (C.V.)",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Selective media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "MacConkey Agar without (C.V.)",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-campylobacter-selective-agar-base",
+      "name": "Campylobacter Selective Agar Base",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Selective media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Campylobacter Selective Agar Base",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-campylobacter-selective-supplement",
+      "name": "Campylobacter Selective Supplement",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Selective media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Campylobacter Selective Supplement",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-mannitol-salt-agar-msa-2",
+      "name": "Mannitol Salt Agar (MSA)",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Selective media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Mannitol Salt Agar (MSA)",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-thiosulfate-citrate-bile-salts-sucrose-tcbs-agar",
+      "name": "Thiosulfate-Citrate-Bile salts-Sucrose (TCBS) Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Selective media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Thiosulfate-Citrate-Bile salts-Sucrose (TCBS) Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-salmonella-shigella-ss-agar",
+      "name": "Salmonella Shigella (SS) Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Selective media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Salmonella Shigella (SS) Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-bismuth-sulfite-agar",
+      "name": "Bismuth Sulfite Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Selective media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Bismuth Sulfite Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-bismuth-sulfate",
+      "name": "Bismuth Sulfate",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Selective media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Bismuth Sulfate",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien",
+      "verification": "Transcribed as printed; unusual spelling or notation needs source/manufacturer confirmation before public use."
+    },
+    {
+      "id": "microbial-culture-media-endo-agar",
+      "name": "Endo Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Selective media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Endo Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-eosine-methylene-blue-emb-agar",
+      "name": "Eosine Methylene Blue (EMB) Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Selective media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Eosine Methylene Blue (EMB) Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-bile-salt-agar",
+      "name": "Bile Salt Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Selective media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Bile Salt Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-macconkey-agar-with-and-without-c-v",
+      "name": "MacConkey Agar (with and without C.V.)",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Differential media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "MacConkey Agar (with and without C.V.)",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-eosine-methylene-blue-emb-agar-2",
+      "name": "Eosine Methylene Blue (EMB) Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Differential media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Eosine Methylene Blue (EMB) Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-xylose-lysine-deoxycholate-xld-agar",
+      "name": "Xylose Lysine Deoxycholate (XLD) Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Differential media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Xylose Lysine Deoxycholate (XLD) Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-cysteine-lysine-electrolyte-deficient-cled-agar",
+      "name": "Cysteine Lysine Electrolyte Deficient (CLED) Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Differential media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Cysteine Lysine Electrolyte Deficient (CLED) Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-mannitol-salt-agar-msa-3",
+      "name": "Mannitol Salt Agar (MSA)",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Differential media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Mannitol Salt Agar (MSA)",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-triple-sugar-iron-tsi-agar-2",
+      "name": "Triple Sugar Iron (TSI) Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Differential media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Triple Sugar Iron (TSI) Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-simmons-citrate-agar-2",
+      "name": "Simmons Citrate Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Differential media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Simmons Citrate Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-bile-esculin-azide-agar",
+      "name": "Bile Esculin Azide Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Differential media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Bile Esculin Azide Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-bile-aesculin-agar",
+      "name": "Bile Aesculin Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Differential media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Bile Aesculin Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-c-l-e-d-medium-with-andrade-indicator",
+      "name": "C.L.E.D Medium with Andrade Indicator",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Differential media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "C.L.E.D Medium with Andrade Indicator",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-lactose-broth-with-and-without-phenol-red",
+      "name": "Lactose Broth (with and without phenol red)",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Differential media",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Lactose Broth (with and without phenol red)",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-thioglycollate-broth",
+      "name": "Thioglycollate Broth",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Anaerobic",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Thioglycollate Broth",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-fluid-thioglycollate-medium",
+      "name": "Fluid Thioglycollate Medium",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Anaerobic",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Fluid Thioglycollate Medium",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-thioglycollate-medium-with-indicator-and-dextrose",
+      "name": "Thioglycollate Medium with indicator and dextrose",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Anaerobic",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Thioglycollate Medium with indicator and dextrose",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-cooked-meat-agar-2",
+      "name": "Cooked Meat Agar",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Anaerobic",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Cooked Meat Agar",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-mueller-hinton-agar-mha",
+      "name": "Mueller Hinton Agar (MHA)",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Anaerobic",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Mueller Hinton Agar (MHA)",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "microbial-culture-media-mueller-hinton-broth-mhb",
+      "name": "Mueller Hinton Broth (MHB)",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Anaerobic",
+      "kind": "media",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 4
+      },
+      "inquiryContext": {
+        "product": "Mueller Hinton Broth (MHB)",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien"
+    },
+    {
+      "id": "urinalysis-urine-strips-10-11-and-12-parameter-options",
+      "name": "Urine strips: 10, 11 and 12 parameter options",
+      "categoryId": "urinalysis",
+      "subcategory": "Urine Strips",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 2
+      },
+      "inquiryContext": {
+        "product": "Urine strips: 10, 11 and 12 parameter options",
+        "categoryId": "urinalysis"
+      },
+      "manufacturer": "Analyticon",
+      "verification": "Brochure states formats as a range; do not infer that each Combi Screen item has every format."
+    },
+    {
+      "id": "ict-hepatitis-b",
+      "name": "Hepatitis B",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Hepatitis B",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck",
+      "verification": "Brochure overview family; do not assume an exact device, specimen type, or equivalence to a page 4 item."
+    },
+    {
+      "id": "ict-hepatitis-c",
+      "name": "Hepatitis C",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Hepatitis C",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck",
+      "verification": "Brochure overview family; do not assume an exact device, specimen type, or equivalence to a page 4 item."
+    },
+    {
+      "id": "ict-hiv",
+      "name": "HIV",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "HIV",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck",
+      "verification": "Brochure overview family; do not assume an exact device, specimen type, or equivalence to a page 4 item."
+    },
+    {
+      "id": "ict-syphilis",
+      "name": "Syphilis",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Syphilis",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck",
+      "verification": "Brochure overview family; do not assume an exact device, specimen type, or equivalence to a page 4 item."
+    },
+    {
+      "id": "ict-h-pylori",
+      "name": "H. pylori",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "H. pylori",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck",
+      "verification": "Brochure overview family; do not assume an exact device, specimen type, or equivalence to a page 4 item."
+    },
+    {
+      "id": "ict-troponin-i",
+      "name": "Troponin I",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Troponin I",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck",
+      "verification": "Brochure overview family; do not assume an exact device, specimen type, or equivalence to a page 4 item."
+    },
+    {
+      "id": "ict-hcg",
+      "name": "HCG",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "HCG",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck",
+      "verification": "Brochure overview family; do not assume an exact device, specimen type, or equivalence to a page 4 item."
+    },
+    {
+      "id": "ict-malaria-parasite",
+      "name": "Malaria Parasite",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Malaria Parasite",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck",
+      "verification": "Brochure overview family; do not assume an exact device, specimen type, or equivalence to a page 4 item."
+    },
+    {
+      "id": "ict-toxoplasmosis",
+      "name": "Toxoplasmosis",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Toxoplasmosis",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck",
+      "verification": "Brochure overview family; do not assume an exact device, specimen type, or equivalence to a page 4 item."
+    },
+    {
+      "id": "ict-tuberculosis",
+      "name": "Tuberculosis",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Tuberculosis",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck",
+      "verification": "Brochure overview family; do not assume an exact device, specimen type, or equivalence to a page 4 item."
+    },
+    {
+      "id": "ict-typhoid",
+      "name": "Typhoid",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Typhoid",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck",
+      "verification": "Brochure overview family; do not assume an exact device, specimen type, or equivalence to a page 4 item."
+    },
+    {
+      "id": "ict-helicobacter-pylori-ag",
+      "name": "Helicobacter pylori Ag",
+      "categoryId": "ict",
+      "subcategory": "Rapid testing overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Helicobacter pylori Ag",
+        "categoryId": "ict"
+      },
+      "manufacturer": "BioCheck",
+      "verification": "Brochure overview family; do not assume an exact device, specimen type, or equivalence to a page 4 item."
+    },
+    {
+      "id": "unplaced-anti-a",
+      "name": "Anti-A",
+      "categoryId": null,
+      "subcategory": "Blood grouping / anti sera",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Anti-A",
+        "categoryId": null
+      },
+      "verification": "Public placement and manufacturer not established by the client taxonomy."
+    },
+    {
+      "id": "unplaced-anti-b",
+      "name": "Anti-B",
+      "categoryId": null,
+      "subcategory": "Blood grouping / anti sera",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Anti-B",
+        "categoryId": null
+      },
+      "verification": "Public placement and manufacturer not established by the client taxonomy."
+    },
+    {
+      "id": "unplaced-anti-ab",
+      "name": "Anti-AB",
+      "categoryId": null,
+      "subcategory": "Blood grouping / anti sera",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Anti-AB",
+        "categoryId": null
+      },
+      "verification": "Public placement and manufacturer not established by the client taxonomy."
+    },
+    {
+      "id": "unplaced-anti-d-igg",
+      "name": "Anti-D (IgG)",
+      "categoryId": null,
+      "subcategory": "Blood grouping / anti sera",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Anti-D (IgG)",
+        "categoryId": null
+      },
+      "verification": "Public placement and manufacturer not established by the client taxonomy."
+    },
+    {
+      "id": "unplaced-extended-grouping-reagents",
+      "name": "Extended grouping reagents",
+      "categoryId": null,
+      "subcategory": "Blood grouping / anti sera",
+      "kind": "reagent",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Extended grouping reagents",
+        "categoryId": null
+      },
+      "verification": "Public placement and manufacturer not established by the client taxonomy."
+    },
+    {
+      "id": "microbial-culture-media-general-purpose-media",
+      "name": "General-purpose media",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Range overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "General-purpose media",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien",
+      "verification": "Brochure family label; does not establish an additional named SKU."
+    },
+    {
+      "id": "microbial-culture-media-enriched-media",
+      "name": "Enriched media",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Range overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Enriched media",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien",
+      "verification": "Brochure family label; does not establish an additional named SKU."
+    },
+    {
+      "id": "microbial-culture-media-selective-media",
+      "name": "Selective media",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Range overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Selective media",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien",
+      "verification": "Brochure family label; does not establish an additional named SKU."
+    },
+    {
+      "id": "microbial-culture-media-differential-media",
+      "name": "Differential media",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Range overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Differential media",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien",
+      "verification": "Brochure family label; does not establish an additional named SKU."
+    },
+    {
+      "id": "microbial-culture-media-indicator-media",
+      "name": "Indicator media",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Range overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Indicator media",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien",
+      "verification": "Brochure family label; does not establish an additional named SKU."
+    },
+    {
+      "id": "microbial-culture-media-enrichment-media",
+      "name": "Enrichment Media",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Range overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Enrichment Media",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien",
+      "verification": "Brochure family label; does not establish an additional named SKU."
+    },
+    {
+      "id": "microbial-culture-media-defined-media",
+      "name": "Defined media",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Range overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Defined media",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien",
+      "verification": "Brochure family label; does not establish an additional named SKU."
+    },
+    {
+      "id": "microbial-culture-media-specialty-organism-media",
+      "name": "Specialty organism media",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Range overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Specialty organism media",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien",
+      "verification": "Brochure family label; does not establish an additional named SKU."
+    },
+    {
+      "id": "microbial-culture-media-transport-holding-media",
+      "name": "Transport & Holding media",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Range overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Transport & Holding media",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien",
+      "verification": "Brochure family label; does not establish an additional named SKU."
+    },
+    {
+      "id": "microbial-culture-media-anaerobic",
+      "name": "Anaerobic",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Range overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Anaerobic",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien",
+      "verification": "Brochure family label; does not establish an additional named SKU."
+    },
+    {
+      "id": "microbial-culture-media-selective-pressure-media",
+      "name": "Selective pressure media",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Range overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Selective pressure media",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien",
+      "verification": "Brochure family label; does not establish an additional named SKU."
+    },
+    {
+      "id": "microbial-culture-media-cryoprotectant-media",
+      "name": "Cryoprotectant media",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Range overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Cryoprotectant media",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien",
+      "verification": "Brochure family label; does not establish an additional named SKU."
+    },
+    {
+      "id": "microbial-culture-media-biochemical-test-media",
+      "name": "Biochemical test media",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Range overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Biochemical test media",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien",
+      "verification": "Brochure family label; does not establish an additional named SKU."
+    },
+    {
+      "id": "microbial-culture-media-quality-control-indicator-media",
+      "name": "Quality control & Indicator media",
+      "categoryId": "microbial-culture-media",
+      "subcategory": "Range overview",
+      "kind": "family",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 3
+      },
+      "inquiryContext": {
+        "product": "Quality control & Indicator media",
+        "categoryId": "microbial-culture-media"
+      },
+      "manufacturer": "Arena BioScien",
+      "verification": "Brochure family label; does not establish an additional named SKU."
+    },
+    {
+      "id": "coagulation-protein-s",
+      "name": "Protein S",
+      "categoryId": "coagulation",
+      "subcategory": "Reagent families",
+      "kind": "family",
+      "manufacturer": "Wiener Lab",
+      "source": {
+        "document": "00-intake/client-files/Alfa Scientific brochure .pdf",
+        "page": 2
+      },
+      "verification": "Brochure overview family; no further variant asserted.",
+      "inquiryContext": {
+        "product": "Protein S",
+        "categoryId": "coagulation"
+      }
+    }
+  ]
+}

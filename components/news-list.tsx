@@ -1,0 +1,6 @@
+'use client';
+import Link from 'next/link';
+import {useState} from 'react';
+import type {NewsArticle,NewsCategory} from '@/content/editorial';
+const categories:('All'|NewsCategory)[]=['All','Company news','Product announcements','Events and exhibitions','Company updates'];
+export function NewsList({articles}:{articles:NewsArticle[]}){const [category,setCategory]=useState<(typeof categories)[number]>('All');const shown=category==='All'?articles:articles.filter(a=>a.category===category);return <div><div className="news-filters" aria-label="News categories">{categories.map(c=><button key={c} type="button" aria-pressed={category===c} onClick={()=>setCategory(c)}>{c}</button>)}</div>{shown.length?<div className="news-list">{shown.map(a=><Link key={a.slug} href={`/news-events/${a.slug}`}><span>{a.category} · {a.date}</span><h3>{a.title}</h3><p>{a.summary}</p><b aria-hidden="true">↗</b></Link>)}</div>:<div className="empty-state" aria-live="polite"><h2>Updates will appear here.</h2><p>There are no published updates to show in this category at present.</p><Link className="text-link" href="/product-line">Explore Product Line ↗</Link></div>}</div>}
