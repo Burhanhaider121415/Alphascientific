@@ -9,3 +9,7 @@ The full supplied company brochure is available as `public/documents/alfa-scient
 ## Stage 06 source-photo framing
 
 The five `public/source/*-framed.png` assets are pixel-identical crops of the already-recovered brochure source PNGs, with a small transparent margin. They remove excess transparent canvas so equipment is legible in responsive cards and product presentations. The original extracted PNGs and the original brochure remain intact. The original and framed files were compared pixel-for-pixel within the recorded crop rectangles on 10 November 2026; no instrument pixels were redrawn or geometries invented.
+
+## Stage 07 creative correction
+
+The COR 50, Abacus 380 and Urilyzer-Cell chapters use the framed brochure photographs, composited in front of browser-rendered Three.js measurement forms. The rings, rails and camera are three-dimensional. The instruments themselves are fixed-view photographs. The available sources lack verified orthogonal side, rear and top views or CAD to reconstruct the full exteriors. ALFA_18–20 remain creative references and are not substituted for exact equipment photography. Product details without verified equipment photographs use a text-led composition. The supplied Animal Chemistry artwork (ALFA_17) remains category-level editorial imagery, without representing individual merchandise. About and Careers retain the approved editorial images; neither identifies the subjects as Alfa employees.
