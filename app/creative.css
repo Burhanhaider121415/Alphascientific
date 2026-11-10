@@ -797,7 +797,11 @@
 @keyframes news-orbit-gentle { from { rotate: -5deg; } to { rotate: 5deg; } }
 
 @media (prefers-reduced-motion: reduce) {
-  .news-orbits { animation: news-orbit-gentle 10s ease-in-out infinite alternate paused; }
+  .news-orbits {
+    animation: news-orbit-gentle 10s ease-in-out infinite alternate paused;
+    animation-duration: 10s !important;
+    animation-iteration-count: infinite !important;
+  }
   .news-core { animation: none; }
 }
 
