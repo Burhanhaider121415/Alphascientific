@@ -134,7 +134,8 @@ export function mountScene(canvas: HTMLCanvasElement, variant: SceneVariant, ima
   const analyzer = isInspection ? urineAnalyzer() : null;
   if (analyzer) scene.add(analyzer);
   const equipment = new Group();
-  scene.add(equipment);
+  const surfaceScene = new Scene();
+  surfaceScene.add(equipment);
   let surface: Awaited<ReturnType<typeof loadEquipmentSurface>> | undefined;
   let disposed = false;
   if (image && variant !== 'inspection') {
@@ -195,9 +196,10 @@ export function mountScene(canvas: HTMLCanvasElement, variant: SceneVariant, ima
           .12 + (reduced ? .21 : .49) * progress + opening * (reduced ? .10 : .19),
           isContact ? .07 : .19,
         );
+        const yaw = direction * (arrivalTurn * (reduced ? .22 : .30) + chamberProgress * .25) + angle + x * .18;
         equipment.rotation.set(
           -.12 - y * .065 - opening * .065,
-          direction * (arrivalTurn * (reduced ? .22 : .30) + chamberProgress * .25) + angle + x * .18,
+          Math.min(.42, Math.max(-.42, yaw)),
           -opening * .025,
         );
         equipment.scale.setScalar(1 + drift * (reduced ? .026 : .052));
@@ -209,6 +211,13 @@ export function mountScene(canvas: HTMLCanvasElement, variant: SceneVariant, ima
         analyzer.scale.setScalar(.87 + model * .13);
       }
       renderer.render(scene, camera);
+      if (surface) {
+        // Keep the optical graphics behind the equipment at every supported angle.
+        renderer.autoClear = false;
+        renderer.clearDepth();
+        renderer.render(surfaceScene, camera);
+        renderer.autoClear = true;
+      }
       return true;
     },
     dispose() {
