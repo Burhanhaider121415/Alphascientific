@@ -82,13 +82,13 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
       if (!firstDraw && scene) firstDraw = now;
       const entrance = firstDraw ? clamp((now - firstDraw) / 1450) : 1;
       const direction = variant === 'discovery' ? 1 : -1;
-      const distance = Math.min(visualBounds.width * .22, 150);
-      const lift = Math.min(visualBounds.height * .24, 135);
+      const distance = Math.min(visualBounds.width * .17, 112);
+      const lift = Math.min(visualBounds.height * .20, 116);
       visual.style.setProperty('--progress', progress.toFixed(3));
       section.style.setProperty('--chapter-progress', progress.toFixed(3));
       visual.style.setProperty('--equipment-x', `${direction * (drift * distance + progress * 14) + cameraX * 20}px`);
       visual.style.setProperty('--equipment-y', `${progress * -lift + cameraY * 13}px`);
-      visual.style.setProperty('--equipment-scale', String(1 + drift * .18 - progress * .16));
+      visual.style.setProperty('--equipment-scale', String(1 + drift * .13 - progress * .14));
       visual.style.setProperty('--equipment-angle', `${direction * (drift * 19 + progress * 7) + cameraX * 11}deg`);
       visual.style.setProperty('--graphic-angle', `${progress * 93 + cameraX * 16}deg`);
       visual.style.setProperty('--model-mix', (motion.matches ? 0 : currentModel).toFixed(3));

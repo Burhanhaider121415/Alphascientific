@@ -356,6 +356,7 @@
   border: 0;
   isolation: isolate;
   min-width: 0;
+  overflow: visible;
 }
 .equipment-stage { height: clamp(390px, 75vh, 740px); }
 .spatial-contact .equipment-stage { height: clamp(360px, 65vh, 660px); }
@@ -383,6 +384,10 @@
 }
 .equipment-stage[data-geometry="active"] .equipment-reticle { opacity: .24; }
 .equipment-stage canvas { z-index: 0; }
+.spatial-home .equipment-stage canvas, .spatial-discovery .equipment-stage canvas {
+  mask-image: linear-gradient(90deg, transparent, black 9% 90%, transparent), linear-gradient(0deg, transparent, black 12% 94%, transparent);
+  mask-composite: intersect;
+}
 .equipment-lift { inset: 10% 7% 15%; opacity: calc(1 - var(--model-mix, 0)); }
 .equipment-lift img { filter: drop-shadow(18px 29px 26px #041b16b5); }
 .spatial-home .equipment-lift { inset: 9% 6% 18%; }
