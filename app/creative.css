@@ -643,7 +643,7 @@
 }
 .news-orbits { transform: rotate(calc(-67deg + var(--news-arrival, 0) * 44deg + var(--motion-progress, .3) * 116deg)) scale(calc(.88 + var(--motion-progress, .3) * .27)); }
 .news-core { transform: rotate(calc(17deg - var(--news-arrival, 0) * 28deg - var(--motion-progress, .3) * 66deg)); }
-.art-news { background: #12372f; }
+.art-news { background: transparent; }
 .direct-band { position: relative; z-index: 1; }
 .button:active { scale: .975; }
 
@@ -716,7 +716,8 @@
     #bdffe4a3 calc(var(--scan-position, 0) * 1%),
     transparent calc(var(--scan-position, 0) * 1% + 1%));
   transform: none;
-  opacity: calc(var(--scan-arrival, 0) * .76 + var(--progress) * .2);
+  translate: 0 var(--idle-scan-offset, 0%);
+  opacity: calc(var(--scan-arrival, 0) * .76 + var(--progress) * .2 + var(--idle-scan-opacity, 0));
   mask-image: radial-gradient(ellipse at center, #000 15%, #000c 52%, transparent 75%);
 }
 @media (prefers-reduced-motion: reduce) {
@@ -757,4 +758,50 @@
 @keyframes exhibit-quiet-entry {
   from { opacity: .73; }
   to { opacity: 1; }
+}
+
+/* Shared forest-green field for the editorial page openings. */
+.editorial-green {
+  color: #edf8f1;
+  background: radial-gradient(ellipse at 76% 43%, #234c40, transparent 57%), linear-gradient(115deg, #102a25, #0b201d);
+}
+.editorial-green .eyebrow,
+.editorial-green h1 em { color: #a8ead6; }
+.editorial-green .careers-copy > p:not(.eyebrow),
+.editorial-green.split-intro > div > p:not(.eyebrow) { color: #d5e9e0; }
+
+.ambient-control {
+  position: absolute;
+  z-index: 3;
+  top: 3%;
+  left: 5%;
+  min-height: 36px;
+  padding: 6px 10px;
+  border: 1px solid #b4e9d157;
+  border-radius: 4px;
+  background: #102e27e8;
+  color: #d9f3e8;
+  font-size: 12px;
+  line-height: 1.2;
+}
+.ambient-control:hover { border-color: #c2f2df; }
+.art-news .ambient-control { top: 14px; left: auto; right: 18px; }
+
+.news-orbits { animation: news-orbit-loop 27s linear infinite paused; }
+.news-core { animation: news-core-loop 15s ease-in-out infinite alternate paused; }
+.art-news[data-ambient-visible]:not([data-ambient-paused]) :is(.news-orbits, .news-core) {
+  animation-play-state: running;
+}
+@keyframes news-orbit-loop { to { rotate: 360deg; } }
+@keyframes news-core-loop { from { rotate: -11deg; } to { rotate: 12deg; } }
+@keyframes news-orbit-gentle { from { rotate: -5deg; } to { rotate: 5deg; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .news-orbits { animation: news-orbit-gentle 10s ease-in-out infinite alternate paused; }
+  .news-core { animation: none; }
+}
+
+@media (max-width: 420px) {
+  .art-news figcaption { left: 10px; bottom: 10px; font-size: 8px; }
+  .art-news .ambient-control { top: 8px; right: 10px; font-size: 11px; }
 }

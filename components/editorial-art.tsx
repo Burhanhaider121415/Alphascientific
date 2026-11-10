@@ -1,17 +1,26 @@
+'use client';
+
+import { useState } from 'react';
+
 export function EditorialArt() {
+  const [paused, setPaused] = useState(false);
   return (
-    <figure className="editorial-visual art-news" data-motion="news" aria-hidden="true">
-      <svg viewBox="0 0 680 560" xmlns="http://www.w3.org/2000/svg">
+    <figure className="editorial-visual art-news" data-motion="news" data-ambient-paused={paused || undefined}>
+      <svg aria-hidden="true" viewBox="0 0 680 560" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <radialGradient id="news-light">
-            <stop stopColor="#448d77" /><stop offset="1" stopColor="#12372f" />
+            <stop stopColor="#448d77" stopOpacity=".76" /><stop offset="1" stopColor="#12372f" stopOpacity="0" />
           </radialGradient>
+          <radialGradient id="news-grid-fade">
+            <stop offset=".44" stopColor="white" /><stop offset="1" stopColor="white" stopOpacity="0" />
+          </radialGradient>
+          <mask id="news-grid-mask"><rect width="680" height="560" fill="url(#news-grid-fade)" /></mask>
           <pattern id="news-grid" width="42" height="42" patternUnits="userSpaceOnUse">
             <path d="M42 0H0V42" fill="none" stroke="#b5eed9" strokeOpacity=".17"/>
           </pattern>
         </defs>
         <rect width="680" height="560" fill="url(#news-light)" />
-        <rect width="680" height="560" fill="url(#news-grid)" />
+        <rect width="680" height="560" fill="url(#news-grid)" mask="url(#news-grid-mask)" />
         <g transform="translate(345 271)">
           <g className="news-orbits" fill="none" stroke="#b5f7dd">
             <ellipse rx="238" ry="121" strokeOpacity=".57" />
@@ -31,6 +40,9 @@ export function EditorialArt() {
         <path d="M63 102V65H100 M580 65H617V102 M63 458V495H100 M580 495H617V458" stroke="#afe6d2" fill="none" strokeOpacity=".7"/>
       </svg>
       <figcaption>FIELD NOTES / ALFA SCIENTIFIC</figcaption>
+      <button type="button" className="ambient-control" onClick={() => setPaused(value => !value)}>
+        {paused ? 'Resume ambient motion' : 'Pause ambient motion'}
+      </button>
     </figure>
   );
 }

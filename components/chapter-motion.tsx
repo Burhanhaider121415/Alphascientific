@@ -41,6 +41,9 @@ export function ChapterMotion() {
           if (!preference.matches) target.classList.add('chapter-in-view');
           active.add(target);
         } else active.delete(target);
+        if (target.dataset.motion === 'news') {
+          target.toggleAttribute('data-ambient-visible', isIntersecting);
+        }
       }
       schedule();
     }, { rootMargin: '75px' });
@@ -59,7 +62,10 @@ export function ChapterMotion() {
       window.removeEventListener('scroll', schedule);
       window.removeEventListener('resize', schedule);
       preference.removeEventListener('change', preferenceChanged);
-      for (const element of reveal) element.style.removeProperty('--motion-progress');
+      for (const element of reveal) {
+        element.style.removeProperty('--motion-progress');
+        element.removeAttribute('data-ambient-visible');
+      }
     };
   }, [pathname]);
 

@@ -12,6 +12,7 @@ type Frame = {
   x: number;
   y: number;
   entrance: number;
+  ambient: number;
   model: number;
   angle: number;
   reduced: boolean;
@@ -156,7 +157,7 @@ export function mountScene(canvas: HTMLCanvasElement, variant: SceneVariant, ima
 
   return {
     hasSurface: () => Boolean(surface),
-    draw({progress, x, y, entrance, model, angle, reduced}: Frame) {
+    draw({progress, x, y, entrance, model, angle, reduced, ambient}: Frame) {
       const w = canvas.clientWidth;
       const h = canvas.clientHeight;
       if (!w || !h) return false;
@@ -172,6 +173,9 @@ export function mountScene(canvas: HTMLCanvasElement, variant: SceneVariant, ima
       const chamberProgress = progress * (reduced ? .42 : 1);
       const opening = Math.sin(entrance * Math.PI);
       const arrivalTurn = Math.sin(entrance * Math.PI * 2) * opening;
+      const sweep = Math.sin(ambient);
+      const pulse = 1 - Math.cos(ambient);
+      const idleTurn = reduced ? 0 : sweep * (isContact ? .13 : .16);
       const cameraX = (isDiscovery ? -2.6 : 2.8) * chamberProgress + x * .65;
       camera.position.set(
         reduced ? 0 : cameraX * (1 - model * .70),
@@ -180,23 +184,23 @@ export function mountScene(canvas: HTMLCanvasElement, variant: SceneVariant, ima
       );
       camera.lookAt(0, -.28 + (reduced ? 0 : progress * .48), 0);
       rig.position.set((isDiscovery ? 1.02 : -.83) * drift * (reduced ? .32 : 1), isContact ? .12 : .22, -.25);
-      rig.rotation.set(-.15 + chamberProgress * .43 + y * .10, x * .20 + chamberProgress * (isDiscovery ? -.35 : .52) + arrivalTurn * .34, -.05);
+      rig.rotation.set(-.15 + chamberProgress * .43 + y * .10, x * .20 + chamberProgress * (isDiscovery ? -.35 : .52) + arrivalTurn * .34 + idleTurn * .54, -.05);
       optics.scale.setScalar(.89 + entrance * .11 + drift * (reduced ? .045 : .10));
       rings.forEach((ring, i) => {
         ring.position.z = -1.05 - i * (.42 + chamberProgress * (isDiscovery ? .60 : .29));
       });
-      scanner.position.y = 1.75 - (chamberProgress * .71 + entrance * .52) * 3.6;
+      scanner.position.y = 1.75 - (chamberProgress * .71 + entrance * .52) * 3.6 + sweep * (reduced ? .32 : .82);
       scanner.material.opacity = Math.max(.10, .32 + opening * .55 - model * .25);
-      accent.intensity = 18 + 29 * (drift * .58 + opening);
+      accent.intensity = 18 + 29 * (drift * .58 + opening) + pulse * (reduced ? 3 : 7);
       accent.position.x = x * 3.6 + chamberProgress * 3.2 + (entrance - .5) * 3.5;
       if (surface) {
         const direction = isDiscovery ? 1 : -1;
         equipment.position.set(
           direction * drift * (reduced ? .20 : .62) + x * .15,
-          .12 + (reduced ? .21 : .49) * progress + opening * (reduced ? .10 : .19),
+          .12 + (reduced ? .21 : .49) * progress + opening * (reduced ? .10 : .19) + (reduced ? 0 : pulse * .045),
           isContact ? .07 : .19,
         );
-        const yaw = direction * (arrivalTurn * (reduced ? .22 : .30) + chamberProgress * .25) + angle + x * .18;
+        const yaw = direction * (arrivalTurn * (reduced ? .22 : .30) + chamberProgress * .25) + angle + x * .18 + idleTurn;
         equipment.rotation.set(
           -.12 - y * .065 - opening * .065,
           Math.min(.42, Math.max(-.42, yaw)),

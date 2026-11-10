@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import type { mountScene, SceneVariant } from './scene-geometry';
 
 type Props = {
@@ -23,6 +23,9 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
   const artwork = useRef<HTMLDivElement>(null);
   const canvas = useRef<HTMLCanvasElement>(null);
   const settings = useRef({model, angle});
+  const ambientEnabled = variant !== 'inspection';
+  const [ambientPaused, setAmbientPaused] = useState(false);
+  const pauseState = useRef(false);
   const refresh = useRef<(resetTurn?: boolean) => void>(() => {});
 
   useEffect(() => {
@@ -56,6 +59,8 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
     let request = 0;
     let firstDraw = 0;
     let last = 0;
+    let ambientTime = 0;
+    let lastAmbientFrame = 0;
 
     function draw(now: number) {
       frame = 0;
@@ -83,6 +88,13 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
       if (!firstDraw) firstDraw = now;
       const entrance = clamp((now - firstDraw) / (reduced ? 2700 : 3400));
       const opening = Math.sin(entrance * Math.PI);
+      const runAmbient = ambientEnabled && !pauseState.current && !document.hidden;
+      if (runAmbient && lastAmbientFrame) {
+        ambientTime += Math.min(now - lastAmbientFrame, 72);
+      }
+      lastAmbientFrame = runAmbient ? now : 0;
+      const ambient = ambientTime * (Math.PI * 2 / 11200);
+      const sweep = Math.sin(ambient);
       const amplitude = reduced ? .34 : 1;
       const direction = variant === 'discovery' ? 1 : -1;
       const distance = Math.min(visualBounds.width * .17, 112);
@@ -91,6 +103,8 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
       section.style.setProperty('--chapter-progress', progress.toFixed(3));
       visual.style.setProperty('--scan-arrival', opening.toFixed(3));
       visual.style.setProperty('--scan-position', String((entrance * .72 + progress * .28) * 100));
+      visual.style.setProperty('--idle-scan-offset', `${sweep * (reduced ? 7 : 17)}%`);
+      visual.style.setProperty('--idle-scan-opacity', String(ambientEnabled ? (reduced ? .14 : .25) + sweep * .055 : 0));
       visual.style.setProperty('--equipment-x', `${(direction * (drift * distance + progress * 14) + cameraX * 20) * amplitude}px`);
       visual.style.setProperty('--equipment-y', `${(progress * -lift + cameraY * 13 - opening * 12) * amplitude}px`);
       visual.style.setProperty('--equipment-scale', String(1 + (drift * .13 - progress * .14) * amplitude));
@@ -100,7 +114,7 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
       visual.dataset.step = progress >= .74 ? '3' : progress >= .26 ? '2' : '1';
       if (scene?.draw({
         progress, x:cameraX * amplitude, y:cameraY * amplitude, entrance,
-        model:currentModel, angle:currentAngle, reduced,
+        model:currentModel, angle:currentAngle, reduced, ambient,
       })) {
         visual.dataset.geometry = 'active';
         if (scene.hasSurface()) visual.dataset.surface = 'depth';
@@ -108,7 +122,7 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
       const settling = Math.abs(x - cameraX) + Math.abs(y - cameraY) > .008 ||
         Math.abs((settings.current.model && scene ? 1 : 0) - currentModel) > .008 ||
         Math.abs(settings.current.angle + turn - currentAngle) > .008;
-      if (entrance < 1 || settling) schedule();
+      if (entrance < 1 || settling || runAmbient) schedule();
     }
 
     function schedule() { if (!frame && visible) frame = requestAnimationFrame(draw); }
@@ -124,13 +138,14 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
       schedule();
     };
     const startDrag = (event: PointerEvent) => {
+      if (event.target instanceof Element && event.target.closest('button')) return;
       if ((!settings.current.model && !scene?.hasSurface()) || !scene || !event.isPrimary || event.button !== 0) return;
       drag = {id:event.pointerId, start:event.clientX, turn};
       visual.setPointerCapture(event.pointerId);
     };
     const stopDrag = () => { drag = undefined; };
     const turnByKey = (event: KeyboardEvent) => {
-      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      if (event.target !== visual || (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight')) return;
       event.preventDefault();
       turn = clamp(turn + (event.key === 'ArrowLeft' ? -.12 : .12), -.52, .52);
       schedule();
@@ -161,7 +176,14 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
     };
     const observer = new IntersectionObserver(([entry]) => {
       visible = entry.isIntersecting;
-      if (visible) { loadScene(); schedule(); }
+      if (visible) {
+        loadScene();
+        schedule();
+      } else {
+        lastAmbientFrame = 0;
+        cancelAnimationFrame(frame);
+        frame = 0;
+      }
     }, { rootMargin: '120px' });
     observer.observe(visual);
     const resize = new ResizeObserver(schedule);
@@ -191,6 +213,11 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
       if (resetTurn) turn = 0;
       schedule();
     };
+    function visibilityChanged() {
+      lastAmbientFrame = 0;
+      if (!document.hidden) schedule();
+    }
+    document.addEventListener('visibilitychange', visibilityChanged);
     window.addEventListener('scroll', schedule, { passive: true });
     pointerArea.addEventListener('pointermove', move);
     pointerArea.addEventListener('pointerleave', reset);
@@ -209,6 +236,7 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
       cancelAnimationFrame(frame);
       observer.disconnect();
       resize.disconnect();
+      document.removeEventListener('visibilitychange', visibilityChanged);
       window.removeEventListener('scroll', schedule);
       pointerArea.removeEventListener('pointermove', move);
       pointerArea.removeEventListener('pointerleave', reset);
@@ -221,7 +249,14 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
       preference.removeEventListener('change', preferenceChanged);
       clearScene();
     };
-  }, [image, name, variant]);
+  }, [ambientEnabled, image, name, variant]);
+
+  function toggleAmbientMotion() {
+    const paused = !pauseState.current;
+    pauseState.current = paused;
+    setAmbientPaused(paused);
+    refresh.current();
+  }
 
   return (
     <section className={`spatial-chapter spatial-${variant}`} ref={chapter} data-signature={variant}>
@@ -248,6 +283,11 @@ export function SpatialStage({ variant, image, name, descriptor, children, next,
             {model && <span className="equipment-fallback-label">Instrument photograph</span>}
           </div>
           <span className="equipment-scale" aria-hidden="true" />
+          {ambientEnabled && (
+            <button type="button" className="ambient-control" onClick={toggleAmbientMotion}>
+              {ambientPaused ? 'Resume ambient motion' : 'Pause ambient motion'}
+            </button>
+          )}
         </div>
       </div>
     </section>
